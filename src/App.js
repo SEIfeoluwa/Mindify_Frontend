@@ -4,7 +4,10 @@ import Header from './components/Header'
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Register from './pages/Register';
-import './App.css';
+import './styles/App.css';
+import PostDetails from './pages/PostDetails';
+import CreatePost from './pages/Createpost';
+import Home from './pages/Home';
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -19,7 +22,7 @@ const App = () => {
   const handleLogOut = () => {
     //Reset all auth related state and clear localStorage
     setUser(null)
-    toggleAuthenticated(false);
+    toggleAuthenticated(false);</Routes>
     localStorage.clear();
   }
 
@@ -47,6 +50,9 @@ const App = () => {
           /> }/>
         <Route path='/profile' element={ <Profile /> }/>
         <Route path='/register' element={ <Register /> }/>
+        <Route path="/" element={ <Home />} />
+        <Route path="/postspage/:id" element={ <PostDetails /> } /> 
+        <Route path="/createpost" element={ <CreatePost /> } /> 
       </Routes> 
       </main>
     </div>
