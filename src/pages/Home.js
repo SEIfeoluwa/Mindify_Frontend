@@ -25,9 +25,8 @@ useEffect(() => {
 
   return (
     <div className="home-container">
-        <h1>Mindify</h1>
-         <h3>For the Body and the Soul</h3>
-       {posts.map((post) => (
+        <h1>MINDIFY</h1>
+        {posts.map((post) => (
         <div className="post-container" onClick={() => showPost(post)}
         key={post.id}>
         <PostItem
