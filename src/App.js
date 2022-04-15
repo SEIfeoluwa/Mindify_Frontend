@@ -5,7 +5,7 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route />
+        
       </Routes>
     </div>
   );
