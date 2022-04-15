@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import PostDetails from './PostDetails'
+import PostItem from './PostDetails'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect} from 'react' 
@@ -8,8 +8,8 @@ import { useState, useEffect} from 'react'
 const Home = () => {
  const [ posts, setPosts] = useState([])
 
- let navigate = useNavigate()
-    const showPost = (posts) => {
+ let navigate = useNavigate()  
+    const showPost = (posts) => {  //after clicking on post it will go to PostDetails
         navigate(`${posts.id}`)
     } 
 
@@ -30,9 +30,10 @@ useEffect(() => {
        {posts.map((post) => (
         <div className="post-container" onClick={() => showPost(post)}
         key={post.id}>
-        <PostDetails
-             title={posts.id}
+        <PostItem
+             title={post.id}
              image={post.image}
+             content={post.content}
               />
         </div>
        ))}
