@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Mindify_Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Date: 4/15/2022
 
-## Available Scripts
+### By: Ifeoluwa adebisi | [LinkedIn](https://www.linkedin.com/in/ifeoluwa-adebisi-b6a9911b7/) | [Github](https://github.com/SEIfeoluwa)
+### Chaz Curlee | [LinkedIn](https://www.linkedin.com/in/chaz-curlee/) | [Github](https://github.com/chazcurlee) 
+### Magdalena Joseph | [LinkedIn](https://www.linkedin.com/in/magdalena-joseph8/) | [Github](https://github.com/MagJoseph) 
+### Ran Kim | [LinkedIn](https://www.linkedin.com/in/rankim/) | [Github](https://github.com/rannkimm) 
 
-In the project directory, you can run:
+***
 
-### `npm start`
+![Mindify](https://github.com/chazcurlee/back-end-prj3/raw/chaz/img/mar-bustos-ARVFsI-32Uk-unsplash.jpg)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+***
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### ***Description***
 
-### `npm test`
+#### Our project is a fitness, health and wellness of mind hub where anyone can come and learn from a plethora of teachers about how we can take care of our bodies. Teachers register and post what they deem basic knowledge about careful upkeep of our bodies. For basic users looking to make changes in their everyday lifestyle they have access to all this knowledge and apply what is helpful to them. Aswell as comment about their experience or any questions they may have.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Try Mindify!
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+***
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### ***Techologies Used***
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![PERN](https://repository-images.githubusercontent.com/248812720/56902700-c5bd-11ea-813f-ed8631377258)
 
-### `npm run eject`
+### [***Component Heirarchy***](https://drive.google.com/file/d/1m-EQDRjwmTLbI0Xdv99b72rAcIr4rLjE/view?ts=62588081)
+![diagram](https://s7.gifyu.com/images/Screenshot-from-2022-04-15-09-38-35.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+***
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### ***Getting Started***
+#### TBA
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+***
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### ***Future Updates***
+    * Create user auth for Students
+    * Seperate posts by hashtags to be filtered in the search bar.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### ***Credits:***
+##### [Trello](https://trello.com/b/7b1J7R2G/mindify)
