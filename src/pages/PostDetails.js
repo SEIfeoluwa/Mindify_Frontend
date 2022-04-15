@@ -13,7 +13,7 @@ let { id } = useParams()
     const getPost = async () => {
         let result = await axios.get(`http://localhost:3001/posts/${id}`)
         console.log(result.data)
-        setSelectedListing(result.data)
+        setSelectedPost(result.data)
     }
 
     useEffect(() => {
