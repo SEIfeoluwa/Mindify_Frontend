@@ -22,7 +22,7 @@ const App = () => {
   const handleLogOut = () => {
     //Reset all auth related state and clear localStorage
     setUser(null)
-    toggleAuthenticated(false);</Routes>
+    toggleAuthenticated(false);
     localStorage.clear();
   }
 
