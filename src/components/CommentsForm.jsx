@@ -25,6 +25,11 @@ let { id } = useParams()
       console.log(e.target.value)
   }
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    getNewComment()
+}
+
   return (
     <div>CommentsForm</div>
   )
