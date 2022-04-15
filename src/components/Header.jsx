@@ -1,5 +1,7 @@
-const Sidebar = () => {
-    
+
+
+const Header = () => {
+
     return (
         <div>
 
@@ -7,4 +9,4 @@ const Sidebar = () => {
     )
 }
 
-export default Sidebar
+export default Header
