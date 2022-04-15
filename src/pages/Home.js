@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import PostItem from './PostDetails'
+import PostItem from '../components/PostItem'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect} from 'react' 

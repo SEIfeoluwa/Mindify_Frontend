@@ -7,6 +7,7 @@ function App() {
   return (
     <div>
       <Routes>
+        <Route path="/" element={ <Home />} />
         <Route path="/postspage/:id" element={ <PostDetails /> } /> 
         <Route path="/createpost" element={ <CreatePost /> } />
       </Routes>
