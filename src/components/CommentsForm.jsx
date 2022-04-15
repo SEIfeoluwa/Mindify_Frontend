@@ -31,7 +31,13 @@ let { id } = useParams()
 }
 
   return (
-    <div>CommentsForm</div>
+    <div>
+        <h2>Comments</h2>
+           <form className="submit-container" onSubmit={handleSubmit}>
+               <input type="text" value={newComment.comment} onChange={handleChange} name={'comment'} placeholder={'Your comment here'} />
+               <button>Submit</button>
+           </form>
+    </div>
   )
 }
 
