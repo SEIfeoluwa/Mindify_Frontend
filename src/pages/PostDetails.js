@@ -11,9 +11,9 @@ const PostDetails = (props) => {
 
 let { id } = useParams()
     const getPost = async () => {
-        let result = await axios.get(`http://localhost:3001/posts/${id}`)
-        console.log(result.data)
-        setSelectedPost(result.data)
+        let result = await axios.get(`http://localhost:3001/posts/postdetail/${id}`)
+        console.log(result.data.indPost)
+        setSelectedPost(result.data.indPost)
     }
 
     useEffect(() => {

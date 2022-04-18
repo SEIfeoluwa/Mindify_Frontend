@@ -56,7 +56,7 @@ const App = () => {
           /> }/>
         <Route path='/register' element={ <Register /> }/>
         <Route path="/" element={ <Home />} />
-        <Route path="/postspage/:id" element={ <PostDetails /> } /> 
+        <Route path="/posts/postsdetail/:id" element={ <PostDetails /> } /> 
         <Route path="/createpost" element={ <CreatePost /> } /> 
         <Route path="/MyProfile" element={ 
           <MyProfile

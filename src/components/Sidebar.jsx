@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 const Sidebar = () => {
     
     return (
-        <div>
+        <div className="side-nav">
             <ul className="nav-links">
              <li className="item logo">Mindify</li>
              <li className="item doc"><i className="fa-solid fa-house"></i><Link to="/home">Home</Link></li>
