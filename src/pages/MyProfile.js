@@ -1,19 +1,19 @@
+import { useState, useEffect } from 'react'
+import Axios from 'axios'
 import PostItem from "../components/PostItem"
 import Sidebar from "../components/Sidebar"
+import Delete from '../components/Delete'
+import UpdatePost from '../components/UpdatePost'
 
 
 const MyProfile = (props) => {
-    const [teacher, setTeacher] = useState()
     const [posts, setPosts] = useState([])
-
-    const data = () => {
-        const teacherData = props.teacher
-        setTeacher(teacherData)
-    }
+    const teacher = props.teacher
+    
 
     useEffect(() => {
       const makeApiCall = async () => {
-        let res = await axios.get('http://localhost:3001/')
+        let res = await Axios.get('http://localhost:3001/')
         setPosts(res.data.posts)
       }
       makeApiCall();
@@ -35,7 +35,7 @@ const MyProfile = (props) => {
                     post={post.content}
                     // user={tweet.user_id}
                     timeStamp={post.createdAt}
-                    {...tweet}
+                    {...post}
                 />
                 ))}
             </div>

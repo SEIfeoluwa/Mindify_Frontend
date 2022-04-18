@@ -8,6 +8,8 @@ import './styles/App.css';
 import PostDetails from './pages/PostDetails';
 import CreatePost from './pages/Createpost';
 import Home from './pages/Home';
+import MyProfile from './pages/MyProfile';
+import { CheckSession  } from './services/Auth'
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -15,13 +17,13 @@ const App = () => {
 
   const checkToken = async () => {
     const user = await CheckSession()
-    setUser(user)
+    setTeacher(user)
     toggleAuthenticated(true)
   }
 
   const handleLogOut = () => {
     //Reset all auth related state and clear localStorage
-    setUser(null)
+    setTeacher(null)
     toggleAuthenticated(false);
     localStorage.clear();
   }
@@ -38,7 +40,7 @@ const App = () => {
     <div>
       <Header 
         authenticated={authenticated}
-        user={user}
+        teacher={ teacher }
         handleLogOut={handleLogOut}
       />
       <main>
@@ -50,12 +52,16 @@ const App = () => {
           /> }/>
         <Route path='/profile' element={ 
           <Profile 
-          user={ user }
+          teacher={ teacher }
           /> }/>
         <Route path='/register' element={ <Register /> }/>
         <Route path="/" element={ <Home />} />
         <Route path="/postspage/:id" element={ <PostDetails /> } /> 
         <Route path="/createpost" element={ <CreatePost /> } /> 
+        <Route path="/MyProfile" element={ 
+          <MyProfile
+          teacher={ teacher } 
+          /> }/>
       </Routes> 
       </main>
     </div>
