@@ -31,10 +31,6 @@ let { id } = useParams()
      <Link className="add-comment" to={`/posts/${selectedPost.id}/commentsform`}>Add a comment here</Link>
               <br></br>
     <div>
-        <Delete />
-    </div>
-    <div>
-        <UpdatePost />
     </div>
     </div> 
   )

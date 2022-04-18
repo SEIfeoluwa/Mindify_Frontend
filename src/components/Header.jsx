@@ -5,7 +5,7 @@ const Header = ({ authenticated, user, handleLogOut }) => {
     let authenticatedOptions
   if (user) {
     authenticatedOptions = (
-      <nav>
+      <nav className="header">
         <h3>Welcome {user.email}!</h3>
         <Link to="/">Home</Link>
         <Link onClick={handleLogOut} to="/">
@@ -16,10 +16,10 @@ const Header = ({ authenticated, user, handleLogOut }) => {
   }
 
   const publicOptions = (
-    <nav>
-      <Link to="/">Home</Link>
-      <Link to="/register">Register</Link>
-      <Link to="/login">Login</Link>
+    <nav className="header">
+      <Link to="/" className="item">Home</Link>
+      <Link to="/register" className="item">Register</Link>
+      <Link to="/login" className="item">Login</Link>
     </nav>
   )
 
