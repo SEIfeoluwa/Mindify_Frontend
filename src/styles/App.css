@@ -8,8 +8,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  
-
 }
 
 .center {
@@ -50,4 +48,28 @@ img {
 .post-content {
   margin: 5px 50px;
   width: 700px;
+}
+
+.post-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.add-comment {
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  margin: 25px;
+  padding:10px;
+}
+
+.comment-item {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  padding: 20px;
+  border: 3px solid rgba(200, 160, 230, 1);
+  width: 200px;
 }

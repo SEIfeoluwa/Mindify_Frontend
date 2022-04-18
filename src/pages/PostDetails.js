@@ -6,8 +6,8 @@ import axios from 'axios'
 import CommentsItem from '../components/CommentsItem'
 
 const PostDetails = (props) => {
-  const [ selectedPost, setSelectedPost ] = useState('')
-  const [comments, setComment] = useState('')
+  const [ selectedPost, setSelectedPost ] = useState()
+  const [comments, setComment] = useState()
 
 
 let { id } = useParams()
@@ -21,18 +21,18 @@ let { id } = useParams()
 
     useEffect(() => {
         getPost()
-        
+     
     }, [])
 
-  return (
- 
+  return ( selectedPost && comments ) ? (
    <div className="post-details">
-       <p className="title">Title: {selectedPost.title}</p>
+       <p className="post-title">Title: {selectedPost.title}</p>
              <img src={selectedPost.image}/>
-                  <p> {selectedPost.content}</p>
+             <br></br>
+                  <p className="post-content"> {selectedPost.content}</p>
              <br></br>
    <div className="comment-container">
-        <h3>Comments</h3>
+        <h3 className="post-title">Comments</h3>
               {comments.map((comment) => (
                    <div className="post-container" key={comment.id}>
                          <CommentsItem
@@ -43,10 +43,11 @@ let { id } = useParams()
                     ))} 
             
         </div> 
+        
      <Link className="add-comment" to={`/posts/postdetail/${selectedPost.id}/commentsform`}>Add a comment here</Link>
               <br></br>
         </div> 
-  )
+  ) : ( <div></div>)
 }
 
 export default PostDetails
