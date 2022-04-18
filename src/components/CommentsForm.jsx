@@ -9,15 +9,18 @@ const CommentsForm = () => {
 
 
 const [newComment, setNewComment ] = useState({
-    comment: ''
+    name: '',
+    comment: '',
+    post_id: []
 })
  
 let { id } = useParams()
   
 
   const getNewComment = async () => {
+      console.log(newComment)
       await axios({
-          url: `http://localhost:3001/posts/postdetail/${id}`,
+          url: `http://localhost:3001/comments/${id}`,
           method: 'post',
           data: newComment
       })
@@ -35,9 +38,10 @@ let { id } = useParams()
 }
 
   return (
-   <div>
-        <h2>Add Your Comment</h2>
+   <div className="comment-container">
+        <h2 className="comment-form">Add Your Comment</h2>
            <form className="submit-container" onSubmit={handleSubmit}>
+           <input type="text" value={newComment.name} onChange={handleChange} name={'name'} placeholder={'Your name here'} />
                <input type="text" value={newComment.comment} onChange={handleChange} name={'comment'} placeholder={'Your comment here'} />
                <button>Submit</button>
            </form>

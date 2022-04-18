@@ -73,3 +73,31 @@ img {
   border: 3px solid rgba(200, 160, 230, 1);
   width: 200px;
 }
+
+.comment-form {
+  background-image: url('https://images.unsplash.com/photo-1492724724894-7464c27d0ceb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80');
+  padding: 15px;
+  color: rgb(255, 255, 255);
+  margin: 10px;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.comment-container {
+  
+  text-align: center;
+
+}
+
+.submit-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+input {
+  padding: 5px;
+  margin: 20px;
+}
