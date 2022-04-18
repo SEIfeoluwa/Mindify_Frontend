@@ -1,7 +1,23 @@
+import PostItem from "../components/PostItem"
 import Sidebar from "../components/Sidebar"
 
 
-const Profile = () => {
+const MyProfile = (props) => {
+    const [teacher, setTeacher] = useState()
+    const [posts, setPosts] = useState([])
+
+    const data = () => {
+        const teacherData = props.teacher
+        setTeacher(teacherData)
+    }
+
+    useEffect(() => {
+      const makeApiCall = async () => {
+        let res = await axios.get('http://localhost:3001/')
+        setPosts(res.data.posts)
+      }
+      makeApiCall();
+    }, [])
 
     return (
         <div>
@@ -23,8 +39,14 @@ const Profile = () => {
                 />
                 ))}
             </div>
+            <div>
+                <Delete />
+            </div>
+            <div>
+                <UpdatePost />
+            </div>
         </div>
     )
 }
 
-export default Profile
+export default MyProfile
