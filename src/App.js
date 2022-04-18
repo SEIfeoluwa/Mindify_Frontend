@@ -17,13 +17,13 @@ const App = () => {
 
   const checkToken = async () => {
     const user = await CheckSession()
-    setUser(user)
+    setTeacher(user)
     toggleAuthenticated(true)
   }
 
   const handleLogOut = () => {
     //Reset all auth related state and clear localStorage
-    setUser(null)
+    setTeacher(null)
     toggleAuthenticated(false);
     localStorage.clear();
   }
@@ -40,7 +40,7 @@ const App = () => {
     <div>
       <Header 
         authenticated={authenticated}
-        user={user}
+        teacher={ teacher }
         handleLogOut={handleLogOut}
       />
       <main>

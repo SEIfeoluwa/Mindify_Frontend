@@ -1,7 +1,21 @@
+import { useState, useEffect } from 'react'
+import Axios from 'axios'
+import PostItem from "../components/PostItem"
 import Sidebar from "../components/Sidebar"
 
 
-const Profile = () => {
+const Profile = (props) => {
+    const [posts, setPosts] = useState([])
+    const teacher = props.teacher
+    
+
+    useEffect(() => {
+      const makeApiCall = async () => {
+        let res = await Axios.get('http://localhost:3001/')
+        setPosts(res.data.posts)
+      }
+      makeApiCall();
+    }, [])
 
     return (
         <div>
@@ -19,7 +33,7 @@ const Profile = () => {
                     post={post.content}
                     // user={tweet.user_id}
                     timeStamp={post.createdAt}
-                    {...tweet}
+                    {...post}
                 />
                 ))}
             </div>

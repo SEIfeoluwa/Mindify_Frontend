@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { SignInUser } from '../services/Auth'
 import Sidebar from '../components/Sidebar'
 
 const Login = (props) => {
@@ -30,7 +31,7 @@ const Login = (props) => {
                     <div className='input-wrapper'>
                         <label htmlFor='email'>Email</label>
                         <input 
-                            onChange={handlechange}
+                            onChange={handleChange}
                             name="email"
                             type="email"
                             placeholder="YourEmail@example.com"
