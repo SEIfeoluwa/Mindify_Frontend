@@ -37,7 +37,18 @@ const Register = () => {
             <div className="card-overlay centered">
                 <form className="col" onSubmit={handleSubmit}>
                     <div className="input-wrapper">
-                        <label htmlFor="name">Name</label>
+                        <label htmlFor="name">First Name</label>
+                        <input
+                        onChange={handleChange}
+                        name="name"
+                        type="text"
+                        placeholder="Your Name"
+                        value={formValues.name}
+                        required
+                        />
+                    </div>
+                    <div className="input-wrapper">
+                        <label htmlFor="name">Last Name</label>
                         <input
                         onChange={handleChange}
                         name="name"
