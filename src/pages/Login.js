@@ -20,7 +20,7 @@ const Login = (props) => {
         })
         props.setUser(payload)
         props.toggleAuthenticated(true)
-        navigate('/home')
+        navigate('/')
     }
     return (
         <div>
