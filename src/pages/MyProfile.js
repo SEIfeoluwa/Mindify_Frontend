@@ -3,13 +3,9 @@ import Sidebar from "../components/Sidebar"
 
 
 const MyProfile = (props) => {
-    const [teacher, setTeacher] = useState()
     const [posts, setPosts] = useState([])
-
-    const data = () => {
-        const teacherData = props.teacher
-        setTeacher(teacherData)
-    }
+    const teacher = props.teacher
+    
 
     useEffect(() => {
       const makeApiCall = async () => {
