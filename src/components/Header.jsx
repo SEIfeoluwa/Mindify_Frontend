@@ -26,7 +26,9 @@ const Header = ({ authenticated, user, handleLogOut }) => {
 
     return (
         <div>
-
+            <header>
+            {authenticated && user ? authenticatedOptions : publicOptions}
+            </header>
         </div>
     )
 }

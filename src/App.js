@@ -49,9 +49,9 @@ const App = () => {
           toggleAuthenticated={toggleAuthenticated} 
           /> }/>
         <Route path='/profile' element={ 
-        <Profile 
-        user={ user }
-        /> }/>
+          <Profile 
+          user={ user }
+          /> }/>
         <Route path='/register' element={ <Register /> }/>
         <Route path="/" element={ <Home />} />
         <Route path="/postspage/:id" element={ <PostDetails /> } /> 
