@@ -3,17 +3,21 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
+
 const CommentsForm = () => {
+
+
 
 const [newComment, setNewComment ] = useState({
     comment: ''
 })
  
 let { id } = useParams()
+  
 
   const getNewComment = async () => {
       await axios({
-          url: `http://localhost:3001/posts/${id}`,
+          url: `http://localhost:3001/posts/postdetail/${id}`,
           method: 'post',
           data: newComment
       })
@@ -31,8 +35,8 @@ let { id } = useParams()
 }
 
   return (
-    <div>
-        <h2>Comments</h2>
+   <div>
+        <h2>Add Your Comment</h2>
            <form className="submit-container" onSubmit={handleSubmit}>
                <input type="text" value={newComment.comment} onChange={handleChange} name={'comment'} placeholder={'Your comment here'} />
                <button>Submit</button>
