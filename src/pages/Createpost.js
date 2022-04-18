@@ -28,15 +28,15 @@ const CreatePost = () => {
 
  const handleSubmit = () => {
     getNewPost()
-    navigate('/postspage')
+    navigate('/')
     window.location.reload(false)
  }
 
   return (
     <div>
-       <h2>Add A New Listing</h2>
+       <h2>Add A New Post</h2>
           <form className="submit-form" onSubmit={handleSubmit}> 
-                  <input type="text" value={newPost.city} onChange={handleChange} name={'title'} placeholder={'title'} />
+                  <input type="text" value={newPost.title} onChange={handleChange} name={'title'} placeholder={'title'} />
                   <input type="text" value={newPost.content} onChange={handleChange} name={'content'} placeholder={'content'} />
                   <input type="text" value={newPost.image} onChange={ handleChange} name={'image'} placeholder={'image'} />
                   <button>Submit</button>

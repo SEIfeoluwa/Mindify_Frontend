@@ -10,7 +10,7 @@ const Home = () => {
 
  let navigate = useNavigate()  
     const showPost = (posts) => {  //after clicking on post it will go to PostDetails
-        navigate(`${posts.id}`)
+        navigate(`posts/postdetail/${posts.id}`)
     } 
 
 const getPosts = async () => {
@@ -24,13 +24,15 @@ useEffect(() => {
  }, [])
 
   return (
-    <div className="home-container">
+    <div>
+    <div className="center">
         <h1>MINDIFY</h1>
+        </div>
         {posts.map((post) => (
-        <div className="post-container" onClick={() => showPost(post)}
+        <div className="home-container" onClick={() => showPost(post)}
         key={post.id}>
         <PostItem
-             title={post.id}
+             title={post.title} 
              image={post.image}
              content={post.content}
               />
