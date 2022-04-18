@@ -24,10 +24,12 @@ useEffect(() => {
  }, [])
 
   return (
-    <div className="home-container">
+    <div>
+    <div className="center">
         <h1>MINDIFY</h1>
+        </div>
         {posts.map((post) => (
-        <div className="post-container" onClick={() => showPost(post)}
+        <div className="home-container" onClick={() => showPost(post)}
         key={post.id}>
         <PostItem
              title={post.title} 
