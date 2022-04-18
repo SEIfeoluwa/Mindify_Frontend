@@ -30,6 +30,7 @@ useEffect(() => {
         <div className="post-container" onClick={() => showPost(post)}
         key={post.id}>
         <PostItem
+           
              title={post.id}
              image={post.image}
              content={post.content}

@@ -23,7 +23,7 @@ let { id } = useParams()
   return (
     <div>
         <div className="post-details">
-             <p>Title: {selectedPost.title}</p>
+            <p>Title: {selectedPost.title}</p>
              <img src={selectedPost.image}/>
              <p> {selectedPost.content}</p>
              <br></br>
