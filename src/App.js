@@ -10,6 +10,8 @@ import CreatePost from './pages/Createpost';
 import Home from './pages/Home';
 import MyProfile from './pages/MyProfile';
 import { CheckSession  } from './services/Auth'
+import CommentsForm from './components/CommentsForm';
+
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -56,8 +58,13 @@ const App = () => {
           /> }/>
         <Route path='/register' element={ <Register /> }/>
         <Route path="/" element={ <Home />} />
+<<<<<<< HEAD
         <Route path="/posts/postsdetail/:id" element={ <PostDetails /> } /> 
+=======
+        <Route path="/posts/postdetail/:id" element={ <PostDetails /> } /> 
+>>>>>>> main
         <Route path="/createpost" element={ <CreatePost /> } /> 
+        <Route path="/posts/postdetail/:id/commentsform" element={ <CommentsForm /> } />
         <Route path="/MyProfile" element={ 
           <MyProfile
           teacher={ teacher } 
