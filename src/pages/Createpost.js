@@ -30,7 +30,7 @@ const CreatePost = (props) => {
    e.preventDefault()
     // getNewPost()
     axios({
-       url: `http://localhost:3001/posts/${teacher.id}`,
+       url: `http://localhost:3001/posts/${teacher._id}`,
        method: 'post',
        data: newPost
      })
