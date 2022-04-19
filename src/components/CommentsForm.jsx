@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
-console.log('Main')
+console.log('hello')
+
 const CommentsForm = () => {
 
 
@@ -11,7 +12,7 @@ const CommentsForm = () => {
 const [newComment, setNewComment ] = useState({
     name: '',
     content: '',
-    post_id: []
+    postId: []
 })
  
 let { id } = useParams()
@@ -32,17 +33,19 @@ let { id } = useParams()
       console.log(e.target.value)
   }
 
-  const handleSubmit = (e) => {
+  const submitForm = (e) => {
     e.preventDefault()
+    console.log('I am in the handle submit')
     getNewComment()
+    
 }
 
   return (
    <div className="comment-container">
         <h2 className="comment-form">Add Your Comment</h2>
-           <form className="submit-container" onSubmit={handleSubmit}>
-           <input type="text" value={newComment.name} onChange={handleChange} name={'name'} placeholder={'Your name here'} />
-               <input type="text" value={newComment.comment} onChange={handleChange} name={'comment'} placeholder={'Your comment here'} />
+           <form className="submit-container" onSubmit={submitForm}>
+           <input className="inp" type="text" value={newComment.name} onChange={handleChange} name={'name'} placeholder={'Your name here'} />
+               <input className="inp" type="text" value={newComment.content} onChange={handleChange} name={'content'} placeholder={'Your comment here'} />
                <button>Submit</button>
            </form>
     </div>
