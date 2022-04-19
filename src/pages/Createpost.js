@@ -4,7 +4,9 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import SideBar from '../components/Sidebar'
 
-const CreatePost = () => {
+const CreatePost = (props) => {
+
+  const teacher = props.teacher
 
   let navigate = useNavigate()
 
@@ -16,7 +18,7 @@ const CreatePost = () => {
 
  const getNewPost = async () => {
      await axios({
-       url: `http://localhost:3001/posts`,
+       url: `http://localhost:3001/posts/${teacher.id}`,
        method: 'post',
        data: newPost
      })

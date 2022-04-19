@@ -6,7 +6,7 @@ const Header = ({ authenticated, teacher, handleLogOut }) => {
   if (teacher) {
     authenticatedOptions = (
       <nav className="header">
-        <h3>Welcome {teacher.username}!</h3>
+        {/* <h3>Welcome {teacher.username}!</h3> */}
         <Link to="/">Home</Link>
         <Link onClick={handleLogOut} to="/">
           Sign Out

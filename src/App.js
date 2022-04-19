@@ -64,7 +64,10 @@ const App = () => {
         <Route path='/register' element={ <Register /> }/>
         <Route path="/" element={ <Home />} />
         <Route path="/posts/postdetail/:id" element={ <PostDetails /> } /> 
-        <Route path="/createpost" element={ <CreatePost /> } /> 
+        <Route path="/createpost" element={ 
+        <CreatePost 
+        teacher={ teacher }
+        /> } /> 
         <Route path="/posts/postdetail/:id/commentsform" element={ <CommentsForm /> } />
         <Route path="/MyProfile" element={ 
           <MyProfile
