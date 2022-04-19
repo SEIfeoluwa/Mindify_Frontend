@@ -11,6 +11,7 @@ import Home from './pages/Home';
 import MyProfile from './pages/MyProfile';
 import { CheckSession  } from './services/Auth'
 import CommentsForm from './components/CommentsForm';
+import Sidebar from './components/Sidebar';
 
 
 const App = () => {
@@ -44,6 +45,10 @@ const App = () => {
         authenticated={authenticated}
         teacher={ teacher }
         handleLogOut={handleLogOut}
+      />
+      <Sidebar 
+      authenticated={authenticated}
+      teacher={ teacher }
       />
       <main>
        <Routes>
