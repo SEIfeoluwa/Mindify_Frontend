@@ -37,8 +37,8 @@ const CreatePost = () => {
 
     <div className="s-container">
        <h2 className="new-post">Add A New Post</h2>
-  
     <div>
+
       <SideBar />
        <h2>Add A New Post</h2>
 
