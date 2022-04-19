@@ -44,7 +44,7 @@ h1 {
   background-image: url('https://images.unsplash.com/photo-1492724724894-7464c27d0ceb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80');
   padding: 15px;
   color: rgb(255, 255, 255);
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .post-title:hover {
@@ -110,7 +110,10 @@ img {
   margin: 10px;
   font-size: 30px;
   font-family: 'Roboto', sans-serif;
+  
 }
+
+
 
 .comment-container {
   
@@ -218,4 +221,16 @@ nav a {
   font-size: 20px;
   height: 100px;
   margin: 10px;
+}
+
+.update-container {
+  text-align: center;
+}
+
+.update-from {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
