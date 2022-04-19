@@ -6,7 +6,7 @@ import Sidebar from '../components/Sidebar'
 const Login = (props) => {
     let navigate = useNavigate()
 
-    const [formValues, setFormValues] = useState({ email: '', password: '' })
+    const [formValues, setFormValues] = useState({ username: '', password: '' })
 
     const handleChange = (e) => {
         setFormValues({ ...formValues, [e.target.name]: e.target.value })
@@ -16,10 +16,10 @@ const Login = (props) => {
         e.preventDefault()
         const payload = await SignInUser(formValues)
         setFormValues({
-        email: "",
+        username: "",
         password: "",
         })
-        props.setUser(payload)
+        props.setTeacher(payload)
         props.toggleAuthenticated(true)
         navigate('/')
     }
@@ -29,13 +29,13 @@ const Login = (props) => {
             <div className='login'> 
                 <form className='log' onSubmit={handleSubmit}>
                     <div className='input-wrapper'>
-                        <label htmlFor='email'>Email</label>
+                        <label htmlFor='email'>Username</label>
                         <input 
                             onChange={handleChange}
-                            name="email"
-                            type="email"
-                            placeholder="YourEmail@example.com"
-                            value={formValues.email}
+                            name="username"
+                            type="text"
+                            placeholder="Your Username"
+                            value={formValues.username}
                             required
                         />
                     </div>
@@ -49,7 +49,7 @@ const Login = (props) => {
                         required
                         />
                     </div>
-                    <button disabled={!formValues.email || !formValues.password}>Log In</button>
+                    <button disabled={!formValues.username || !formValues.password}>Log In</button>
                 </form> 
             </div>
         </div>
