@@ -42,7 +42,7 @@ const CreatePost = (props) => {
     <div>
 
       <SideBar />
-       <h2>Add A New Post</h2>
+       
 
           <form className="submit-form" onSubmit={handleSubmit}> 
                   <input className="input" type="text" value={newPost.title} onChange={handleChange} name={'title'} placeholder={'title'} />

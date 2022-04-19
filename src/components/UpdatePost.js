@@ -30,12 +30,13 @@ const handleSubmit= (e) => {
 }
 
   return (
-    <div> Update Post:
-       <form className="update-form" onSubmit={handleSubmit}>
-        <input type="text" title="title" onChange={(e)=>{setTitle(e.target.value)}} placeholder="Title"/>
-        <input type="text" title="title" onChange={(e)=>{setContent(e.target.value)}} placeholder="Content"/>
-        <input type="text" image="image" onChange={(e)=>{setImgUrl(e.target.value)}}  placeholder="imgUrl"/>
-      <button>Submit</button>
+    <div className="comment-container"> 
+        <h2 className="comment-form">Update Your post</h2>
+       <form className="submit-container" onSubmit={handleSubmit}>
+        <input className="input" type="text" title="title" onChange={(e)=>{setTitle(e.target.value)}} placeholder="Title"/>
+        <input className="input" type="text" title="title" onChange={(e)=>{setContent(e.target.value)}} placeholder="Content"/>
+        <input className="input" type="text" image="image" onChange={(e)=>{setImgUrl(e.target.value)}}  placeholder="imgUrl"/>
+      <button className="s-btn">Submit</button>
     </form>
     
     </div>
