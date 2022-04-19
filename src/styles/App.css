@@ -8,7 +8,14 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin: 20px 45px;
+  
 }
+
+.home-container:hover {
+  box-shadow: 0px 2px 20px 5px rgb(250, 208, 188);
+}
+
 
 
 .center {
@@ -17,10 +24,17 @@
 
 h1 {
   font-size: 4rem;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.6rem;
   color: rgb(255, 255, 255);
   background-image: url('https://images.unsplash.com/photo-1492724724894-7464c27d0ceb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80');
   padding: 10px;
+  animation: spacing 3s 1;
+}
+
+@keyframes spacing {
+  50% {
+    letter-spacing: 1rem;
+  }
 }
 
 .post-title {
@@ -30,7 +44,11 @@ h1 {
   background-image: url('https://images.unsplash.com/photo-1492724724894-7464c27d0ceb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80');
   padding: 15px;
   color: rgb(255, 255, 255);
-  opacity: 0.8;
+  opacity: 0.9;
+}
+
+.post-title:hover {
+  opacity: 1;
 }
 
 img {
@@ -38,6 +56,8 @@ img {
   padding: 20px;
   margin: 10px;
   box-shadow: 0px 2px 15px 5px rgb(128, 129, 130);
+  background-color:rgb(255, 255, 255);
+  
 }
 
 
@@ -58,6 +78,8 @@ img {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: rgba(249, 220, 207, 0.8);
+  margin: 45px;
 }
 
 .add-comment {
@@ -66,6 +88,10 @@ img {
   font-weight: bolder;
   margin: 25px;
   padding:10px;
+}
+
+.add-comment:hover {
+  background-color: rgb(181, 121, 227);
 }
 
 .comment-item {
@@ -84,7 +110,10 @@ img {
   margin: 10px;
   font-size: 30px;
   font-family: 'Roboto', sans-serif;
+  
 }
+
+
 
 .comment-container {
   
@@ -92,7 +121,7 @@ img {
 
 }
 
-.submit-container {
+ .submit-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -136,7 +165,7 @@ nav a {
 }
 
 .add-comment {
-  border: 3px solid rgba(200, 160, 230, 1);
+  border: none;
   text-decoration: none;
   background-color: rgba(200, 160, 230, 1);
   color: rgb(255, 255, 255);
@@ -168,13 +197,17 @@ nav a {
 }
 
 .s-btn {
-  border: 3px solid rgba(200, 160, 230, 1);
   background-color: rgba(200, 160, 230, 1);
   color: rgb(255, 255, 255);
   width: 150px;
   padding: 10px;
   font-size: 20px;
   margin: 15px;
+  border: none;
+}
+
+.s-btn:hover {
+  background-color: rgb(181, 121, 227);
 }
 
 .comm {
@@ -188,4 +221,16 @@ nav a {
   font-size: 20px;
   height: 100px;
   margin: 10px;
+}
+
+.update-container {
+  text-align: center;
+}
+
+.update-from {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }

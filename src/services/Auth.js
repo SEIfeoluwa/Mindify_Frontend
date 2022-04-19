@@ -1,9 +1,11 @@
 import Client from './api'
 
 export const SignInUser = async (data) => {
+  
   try {
     const res = await Client.post('/login', data)
     // Set the current signed in users token to localStorage
+    
     localStorage.setItem('token', res.data.token)
     console.log(res.data.user)
     return res.data.user
@@ -26,7 +28,7 @@ export const CheckSession = async () => {
     console.log('checksesson')
     // Checks if the current token if it exists is valid
     const res = await Client.get('/session')
-    console.log(res)
+    
     return res.data
   } catch (error) {
     throw error

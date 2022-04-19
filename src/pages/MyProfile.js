@@ -10,14 +10,14 @@ const MyProfile = (props) => {
     const [posts, setPosts] = useState([])
     const teacher = props.teacher
     
-
-    useEffect(() => {
-      const makeApiCall = async () => {
-        let res = await Axios.get('http://localhost:3001/')
-        setPosts(res.data.posts)
-      }
-      makeApiCall();
-    }, [])
+    console.log(teacher)
+    // useEffect(() => {
+    //   const makeApiCall = async () => {
+    //     let res = await Axios.get(`http://localhost:3001/posts/${teacher.id}`)
+    //     setPosts(res.data.posts)
+    //   }
+    //   makeApiCall();
+    // }, [])
 
     return (
         <div>
