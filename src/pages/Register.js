@@ -7,7 +7,9 @@ const Register = () => {
     let navigate = useNavigate()
 
     const [formValues, setFormValues] = useState({
-        name: '',
+        firstName: '',
+        lastName: '',
+        username: '',
         email: '',
         password: '',
         confirmPassword: ''
@@ -15,15 +17,19 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         await RegisterUser({
-          name: formValues.name,
+          firstName: formValues.firstName,
+          lastName: formValues.lastName,
+          username: formValues.username,
           email:formValues.email,
           password:formValues.password
         })
         setFormValues({
-          name: '',
-          email: '',
-          password: '',
-          confirmPassword: ''})
+            firstName: '',
+            lastName: '',
+            username: '',
+            email: '',
+            password: '',
+            confirmPassword: ''})
         navigate('/login')
     }
 
@@ -40,10 +46,10 @@ const Register = () => {
                         <label htmlFor="name">First Name</label>
                         <input
                         onChange={handleChange}
-                        name="name"
+                        name="firstName"
                         type="text"
                         placeholder="Your Name"
-                        value={formValues.name}
+                        value={formValues.firstName}
                         required
                         />
                     </div>
@@ -51,10 +57,21 @@ const Register = () => {
                         <label htmlFor="name">Last Name</label>
                         <input
                         onChange={handleChange}
-                        name="name"
+                        name="lastName"
                         type="text"
                         placeholder="Your Name"
-                        value={formValues.name}
+                        value={formValues.lastName}
+                        required
+                        />
+                    </div>
+                    <div className="input-wrapper">
+                        <label htmlFor="username">Username</label>
+                        <input
+                        onChange={handleChange}
+                        name="username"
+                        type="text"
+                        placeholder="Your Name"
+                        value={formValues.username}
                         required
                         />
                     </div>
