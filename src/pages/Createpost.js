@@ -4,12 +4,15 @@ import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
 import SideBar from '../components/Sidebar'
 
-const CreatePost = () => {
+const CreatePost = (props) => {
+
+  const teacher = props.teacher
 
   //let navigate = useNavigate()
 
   const [ newPost, setNewPost ] = useState({
     title: '',
+    tag: '',
     content: '',
     image: '',
   })
@@ -45,6 +48,7 @@ const CreatePost = () => {
        <SideBar />
         <form className="submit-form" onSubmit={submitFunc}> 
                   <input className="input" type="text" value={newPost.title} onChange={handleChange} name={'title'} placeholder={'title'} />
+                  <input className="input" type="text" value={newPost.tag} onChange={handleChange} name={'tag'} placeholder={'tags'} />
                   <input className="in-cont input" type="text" value={newPost.content} onChange={handleChange} name={'content'} placeholder={'content'} />
                   <input className="input" type="text" value={newPost.image} onChange={ handleChange} name={'image'} placeholder={'image url'} />
                   <button className="s-btn">Submit</button>
