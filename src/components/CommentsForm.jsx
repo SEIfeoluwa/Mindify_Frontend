@@ -1,14 +1,14 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Navigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 
 console.log('hello')
 
 const CommentsForm = () => {
   
-
+    let navigate = useNavigate()
 
 const [newComment, setNewComment ] = useState({
     name: '',
@@ -37,8 +37,8 @@ let { id } = useParams()
   const submitForm = (e) => {
     e.preventDefault()
     getNewComment()
-    //navigate(`/posts/postdetail/${id}`)
-    //window.location.reload(false)
+    navigate(`/posts/postdetail/${id}`)
+    window.location.reload(false)
    
     
 }
