@@ -99,7 +99,7 @@ img {
 }
 
 
-.inp {
+
 
 /* .side-nav {
   width: 250px;
@@ -124,11 +124,12 @@ header {
   text-align: right;
   background: white;
 }
+
 nav a {
   text-decoration-line: none;
   padding: 0 5px 0 5px;
 }
-input {
+.input {
 
   padding: 5px;
   margin: 20px;

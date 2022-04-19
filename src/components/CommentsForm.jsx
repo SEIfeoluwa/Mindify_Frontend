@@ -44,8 +44,8 @@ let { id } = useParams()
    <div className="comment-container">
         <h2 className="comment-form">Add Your Comment</h2>
            <form className="submit-container" onSubmit={submitForm}>
-           <input className="inp" type="text" value={newComment.name} onChange={handleChange} name={'name'} placeholder={'Your name here'} />
-               <input className="inp" type="text" value={newComment.content} onChange={handleChange} name={'content'} placeholder={'Your comment here'} />
+           <input className="input" type="text" value={newComment.name} onChange={handleChange} name={'name'} placeholder={'Your name here'} />
+               <input className="input" type="text" value={newComment.content} onChange={handleChange} name={'content'} placeholder={'Your comment here'} />
                <button>Submit</button>
            </form>
     </div>
