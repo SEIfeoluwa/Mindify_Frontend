@@ -16,7 +16,7 @@ import Sidebar from './components/Sidebar';
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
-  const [teacher, setTeacher] = useState(null)
+  const [teacher, setTeacher] = useState('')
 
   const checkToken = async () => {
     const user = await CheckSession()
