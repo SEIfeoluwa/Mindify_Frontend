@@ -6,7 +6,7 @@ import SideBar from '../components/Sidebar'
 
 const CreatePost = () => {
 
-  let navigate = useNavigate()
+  //let navigate = useNavigate()
 
   const [ newPost, setNewPost ] = useState({
     title: '',
@@ -31,10 +31,10 @@ const CreatePost = () => {
       console.log(e.target.value)
  } 
 
- const handleSubmit = () => {
+ const submitFunc = () => {
     getNewPost()
-    navigate('/')
-    window.location.reload(false)
+   // navigate('/')
+  //  window.location.reload(false)
  }
 
   return (
@@ -43,7 +43,7 @@ const CreatePost = () => {
        <h2 className="new-post">Add A New Post</h2>
     <div>
        <SideBar />
-        <form className="submit-form" onSubmit={handleSubmit}> 
+        <form className="submit-form" onSubmit={submitFunc}> 
                   <input className="input" type="text" value={newPost.title} onChange={handleChange} name={'title'} placeholder={'title'} />
                   <input className="in-cont input" type="text" value={newPost.content} onChange={handleChange} name={'content'} placeholder={'content'} />
                   <input className="input" type="text" value={newPost.image} onChange={ handleChange} name={'image'} placeholder={'image url'} />
