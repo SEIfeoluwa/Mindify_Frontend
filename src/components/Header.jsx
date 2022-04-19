@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom"
 
-const Header = ({ authenticated, user, handleLogOut }) => {
+const Header = ({ authenticated, teacher, handleLogOut }) => {
 
     let authenticatedOptions
-  if (user) {
+  if (teacher) {
     authenticatedOptions = (
-      <nav>
-        <h3>Welcome {user.email}!</h3>
+      <nav className="header">
+        <h3>Welcome {teacher.username}!</h3>
         <Link to="/">Home</Link>
         <Link onClick={handleLogOut} to="/">
           Sign Out
@@ -16,10 +16,10 @@ const Header = ({ authenticated, user, handleLogOut }) => {
   }
 
   const publicOptions = (
-    <nav>
-      <Link to="/">Home</Link>
-      <Link to="/register">Register</Link>
-      <Link to="/login">Login</Link>
+    <nav className="header">
+      <Link to="/" className="item">Home</Link>
+      <Link to="/register" className="item">Register</Link>
+      <Link to="/login" className="item">Login</Link>
     </nav>
   )
 
@@ -27,7 +27,7 @@ const Header = ({ authenticated, user, handleLogOut }) => {
     return (
         <div>
             <header>
-            {authenticated && user ? authenticatedOptions : publicOptions}
+            {authenticated && teacher ? authenticatedOptions : publicOptions}
             </header>
         </div>
     )

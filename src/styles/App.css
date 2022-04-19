@@ -97,6 +97,33 @@ img {
   text-align: center;
 }
 
+/* .side-nav {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 30px;
+  text-decoration-line: none;
+  font-size: 1.5rem;
+}
+.nav-links {
+  list-style: none;
+  position: relative;
+  text-decoration: none;
+}
+.nav-links li {
+  padding: 10px 0;
+} */
+header {
+  padding: 10px 0 10px 0;
+  text-align: right;
+  background: white;
+}
+nav a {
+  text-decoration-line: none;
+  padding: 0 5px 0 5px;
+}
 input {
   padding: 5px;
   margin: 20px;
