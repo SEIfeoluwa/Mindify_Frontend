@@ -16,7 +16,7 @@ const CreatePost = () => {
 
  const getNewPost = async () => {
      await axios({
-       url: `http://localhost:3001/posts`,
+       url: `http://localhost:3001/posts/`,
        method: 'post',
        data: newPost
      })
