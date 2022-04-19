@@ -12,6 +12,7 @@ import MyProfile from './pages/MyProfile';
 import { CheckSession  } from './services/Auth'
 import CommentsForm from './components/CommentsForm';
 import Sidebar from './components/Sidebar';
+import IPP from './pages/IPP'
 
 
 const App = () => {
@@ -64,6 +65,7 @@ const App = () => {
         <Route path='/register' element={ <Register /> }/>
         <Route path="/" element={ <Home />} />
         <Route path="/posts/postdetail/:id" element={ <PostDetails /> } /> 
+        <Route path="/IPP" element={ <IPP /> } />
         <Route path="/createpost" element={ 
         <CreatePost 
         teacher={ teacher }
