@@ -10,6 +10,7 @@
   text-align: center;
 }
 
+
 .center {
   text-align: center;
 }
@@ -38,6 +39,7 @@ img {
   margin: 10px;
   box-shadow: 0px 2px 15px 5px rgb(128, 129, 130);
 }
+
 
 .list-item {
   text-align: center;
@@ -99,7 +101,7 @@ img {
 }
 
 
-.inp {
+
 
 /* .side-nav {
   width: 250px;
@@ -124,16 +126,17 @@ header {
   text-align: right;
   background: white;
 }
+
 nav a {
   text-decoration-line: none;
   padding: 0 5px 0 5px;
 }
-input {
-
-  padding: 5px;
+.input {
+ padding: 10px;
   margin: 20px;
   width: 200px;
   border: 3px solid rgba(200, 160, 230, 1);
+  font-size: 20px;
 }
 
 .add-comment {
@@ -166,4 +169,27 @@ input {
 
 .in-cont {
   height: 170px;
+}
+
+.s-btn {
+  border: 3px solid rgba(200, 160, 230, 1);
+  background-color: rgba(200, 160, 230, 1);
+  color: rgb(255, 255, 255);
+  width: 150px;
+  padding: 10px;
+  font-size: 20px;
+  margin: 15px;
+}
+
+.comm {
+  padding: 10px;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.comm1 {
+  padding: 10px;
+  font-size: 20px;
+  height: 100px;
+  margin: 10px;
 }
