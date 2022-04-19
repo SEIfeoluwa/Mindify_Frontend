@@ -1,12 +1,13 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
+
 
 console.log('hello')
 
 const CommentsForm = () => {
-
+  
 
 
 const [newComment, setNewComment ] = useState({
@@ -35,8 +36,10 @@ let { id } = useParams()
 
   const submitForm = (e) => {
     e.preventDefault()
-    console.log('I am in the handle submit')
     getNewComment()
+    //navigate(`/posts/postdetail/${id}`)
+    //window.location.reload(false)
+   
     
 }
 
