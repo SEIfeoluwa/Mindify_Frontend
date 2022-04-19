@@ -120,7 +120,7 @@ header {
   text-align: right;
   background: white;
 }
-.item {
+nav a {
   text-decoration-line: none;
   padding: 0 5px 0 5px;
 }

@@ -11,6 +11,7 @@ import Home from './pages/Home';
 import MyProfile from './pages/MyProfile';
 import { CheckSession  } from './services/Auth'
 import CommentsForm from './components/CommentsForm';
+import Sidebar from './components/Sidebar';
 
 
 const App = () => {
@@ -45,6 +46,10 @@ const App = () => {
         teacher={ teacher }
         handleLogOut={handleLogOut}
       />
+      <Sidebar 
+      authenticated={authenticated}
+      teacher={ teacher }
+      />
       <main>
        <Routes>
         <Route path='/login' element={
@@ -58,11 +63,7 @@ const App = () => {
           /> }/>
         <Route path='/register' element={ <Register /> }/>
         <Route path="/" element={ <Home />} />
-<<<<<<< HEAD
-        <Route path="/posts/postsdetail/:id" element={ <PostDetails /> } /> 
-=======
         <Route path="/posts/postdetail/:id" element={ <PostDetails /> } /> 
->>>>>>> main
         <Route path="/createpost" element={ <CreatePost /> } /> 
         <Route path="/posts/postdetail/:id/commentsform" element={ <CommentsForm /> } />
         <Route path="/MyProfile" element={ 

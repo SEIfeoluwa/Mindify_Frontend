@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import SideBar from '../components/Sidebar'
 
 const CreatePost = () => {
 
@@ -34,6 +35,7 @@ const CreatePost = () => {
 
   return (
     <div>
+      <SideBar />
        <h2>Add A New Post</h2>
           <form className="submit-form" onSubmit={handleSubmit}> 
                   <input type="text" value={newPost.title} onChange={handleChange} name={'title'} placeholder={'title'} />

@@ -3,14 +3,14 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
-
+console.log('Main')
 const CommentsForm = () => {
 
 
 
 const [newComment, setNewComment ] = useState({
     name: '',
-    comment: '',
+    content: '',
     post_id: []
 })
  

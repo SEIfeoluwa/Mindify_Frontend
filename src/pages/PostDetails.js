@@ -12,16 +12,10 @@ const PostDetails = (props) => {
 
 let { id } = useParams()
     const getPost = async () => {
-<<<<<<< HEAD
-        let result = await axios.get(`http://localhost:3001/posts/postdetail/${id}`)
-        console.log(result.data.indPost)
-        setSelectedPost(result.data.indPost)
-=======
         const result = await axios.get(`http://localhost:3001/posts/postdetail/${id}`)
         console.log(result.data.getComments)
         setSelectedPost(result.data.indPost)
         setComment(result.data.getComments)
->>>>>>> main
     }
 
 
@@ -52,15 +46,8 @@ let { id } = useParams()
         
      <Link className="add-comment" to={`/posts/postdetail/${selectedPost.id}/commentsform`}>Add a comment here</Link>
               <br></br>
-<<<<<<< HEAD
-    <div>
-    </div>
-    </div> 
-  )
-=======
         </div> 
   ) : ( <div></div>)
->>>>>>> main
 }
 
 export default PostDetails
