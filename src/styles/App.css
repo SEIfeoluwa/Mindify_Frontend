@@ -130,11 +130,11 @@ nav a {
   padding: 0 5px 0 5px;
 }
 .input {
-
-  padding: 5px;
+ padding: 10px;
   margin: 20px;
   width: 200px;
   border: 3px solid rgba(200, 160, 230, 1);
+  font-size: 20px;
 }
 
 .add-comment {
@@ -167,4 +167,27 @@ nav a {
 
 .in-cont {
   height: 170px;
+}
+
+.s-btn {
+  border: 3px solid rgba(200, 160, 230, 1);
+  background-color: rgba(200, 160, 230, 1);
+  color: rgb(255, 255, 255);
+  width: 150px;
+  padding: 10px;
+  font-size: 20px;
+  margin: 15px;
+}
+
+.comm {
+  padding: 10px;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.comm1 {
+  padding: 10px;
+  font-size: 20px;
+  height: 100px;
+  margin: 10px;
 }

@@ -46,7 +46,7 @@ const CreatePost = () => {
                   <input className="input" type="text" value={newPost.title} onChange={handleChange} name={'title'} placeholder={'title'} />
                   <input className="in-cont input" type="text" value={newPost.content} onChange={handleChange} name={'content'} placeholder={'content'} />
                   <input className="input" type="text" value={newPost.image} onChange={ handleChange} name={'image'} placeholder={'image url'} />
-                  <button>Submit</button>
+                  <button className="s-btn">Submit</button>
           </form>
     </div>
     </div>
