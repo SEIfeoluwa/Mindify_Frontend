@@ -11,7 +11,7 @@ const Delete = (props) => {
   let navigate = useNavigate()
 
   const deletePost = async () => {
-        await axios.delete(`http://localhost:3001/posts/${id}`);
+        await axios.delete(`http://localhost:3001/posts/${props.postId}`);
   }
 
    const handleDelete = () => {
