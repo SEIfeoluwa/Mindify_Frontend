@@ -6,8 +6,8 @@ import SideBar from '../components/Sidebar'
 
 const CreatePost = (props) => {
 
-  const teacher = props.teacher
-
+  const teacher = props.teacher.id
+  console.log(teacher)
   let navigate = useNavigate()
 
   const [ newPost, setNewPost ] = useState({
@@ -17,9 +17,7 @@ const CreatePost = (props) => {
     image: '',
   })
 
- 
  const getNewPost = async () => {
-  console.log(newPost)
      await axios({
        url: `http://localhost:3001/posts/${teacher.id}`,
        method: 'post',
@@ -29,12 +27,11 @@ const CreatePost = (props) => {
 
  const handleChange = (e) => {
       setNewPost({...newPost, [e.target.name]: e.target.value })
-      console.log(e.target.name)
-      console.log(e.target.value)
+      console.log(newPost)
  } 
 
- const submitFunc = (e) => {
-     e.preventDefault()
+ const handleSubmit = (e) => {
+   e.preventDefault()
     getNewPost()
     navigate('/')
     window.location.reload(false)
@@ -45,8 +42,8 @@ const CreatePost = (props) => {
     <div className="s-container">
        <h2 className="new-post">Add A New Post</h2>
     <div>
-       <SideBar />
-        <form className="submit-form" onSubmit={submitFunc}> 
+    
+          <form className="submit-form" onSubmit={handleSubmit}> 
                   <input className="input" type="text" value={newPost.title} onChange={handleChange} name={'title'} placeholder={'title'} />
                   <input className="input" type="text" value={newPost.tag} onChange={handleChange} name={'tag'} placeholder={'tags'} />
                   <input className="in-cont input" type="text" value={newPost.content} onChange={handleChange} name={'content'} placeholder={'content'} />
