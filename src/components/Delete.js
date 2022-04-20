@@ -5,9 +5,9 @@ import { useNavigate } from 'react-router-dom'
 
 
 
-const Delete = () => {
+const Delete = (props) => {
   
-  let { id } = useParams()
+  let { id } = props.postId 
   let navigate = useNavigate()
 
   const deletePost = async () => {
@@ -16,12 +16,12 @@ const Delete = () => {
 
    const handleDelete = () => {
       deletePost()
-       navigate('/postspage')
+       navigate('/')
    }
 
   return (
-    <div>
-    <button className="del-btn" onClick={handleDelete}>Delete Post</button>
+    <div className='centered'>
+    <button className="s-btn" onClick={handleDelete}>Delete Post</button>
     </div>
   )
 }

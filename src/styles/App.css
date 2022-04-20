@@ -15,9 +15,6 @@
 .home-container:hover {
   box-shadow: 0px 2px 20px 5px rgb(250, 208, 188);
 }
-
-
-
 .center {
   text-align: center;
 }
@@ -112,9 +109,6 @@ img {
   font-family: 'Roboto', sans-serif;
   
 }
-
-
-
 .comment-container {
   
   text-align: center;
@@ -128,24 +122,40 @@ img {
   align-items: center;
   text-align: center;
 }
-/* .side-nav {
+ .side-nav {
+  font-size: 1.5rem;
   width: 250px;
   height: 100%;
   position: fixed;
-  top: 0;
+  padding-top: 120px;
   left: 0;
-  padding: 20px 30px;
-  text-decoration-line: none;
-  font-size: 1.5rem;
+  
 }
+
 .nav-links {
   list-style: none;
   position: relative;
-  text-decoration: none;
 }
 .nav-links li {
   padding: 10px 0;
-} */
+} 
+.nav-links li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.butt {
+  background-color: rgba(200, 160, 230, 1);
+  color: white;
+  padding: 10px 30px;
+  border-radius: 25px;
+  border-color: rgba(200, 160, 230, 1);
+}
+.butt:hover {
+  background: white;
+  color: rgba(200, 160, 230, 1);
+  border-color: white;
+}
 header {
   padding: 10px 0 10px 0;
   text-align: right;
@@ -233,4 +243,13 @@ nav a {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.img {
+  display: grid;
+  place-items: center;
+}
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

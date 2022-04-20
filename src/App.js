@@ -71,7 +71,7 @@ const App = () => {
         teacher={ teacher }
         /> } /> 
         <Route path="/posts/postdetail/:id/commentsform" element={ <CommentsForm /> } />
-        <Route path="/MyProfile" element={ 
+        <Route path="/prof" element={ 
           <MyProfile
           teacher={ teacher } 
           /> }/>
