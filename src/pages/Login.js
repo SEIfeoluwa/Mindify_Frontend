@@ -26,7 +26,7 @@ const Login = (props) => {
     return (
         <div>
             <Sidebar />
-            <div className='login'> 
+            <div className='login centered'> 
                 <form className='log' onSubmit={handleSubmit}>
                     <div className='input-wrapper'>
                         <label htmlFor='email'>Username</label>
