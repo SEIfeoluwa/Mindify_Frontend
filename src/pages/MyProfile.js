@@ -11,6 +11,7 @@ const MyProfile = (props) => {
     const teacherCallL = localStorage.getItem('user')
     const teacher = props.teacher
     
+<<<<<<< HEAD
     console.log(teacherCallL)
     let navigate = useNavigate()
 //  const teacherId = () => {
@@ -19,6 +20,11 @@ const MyProfile = (props) => {
 //         //   setTeacherCall(res)
 //       }
 //       teacherId();
+=======
+    // console.log(teacher)
+    let navigate = useNavigate()
+
+>>>>>>> main
     useEffect(() => {
        
       const makeApiCall = async () => {
@@ -35,9 +41,15 @@ const MyProfile = (props) => {
       
     }, [])
 
+<<<<<<< HEAD
     const showPost = (posts) => {  //after clicking on post it will go to PostDetails
         navigate(`posts/postdetail/${posts.id}`)
     } 
+=======
+    // const showPost = (posts) => {  //after clicking on post it will go to PostDetails
+    //     navigate(`posts/postdetail/${posts.id}`)
+    // } 
+>>>>>>> main
 
     return (posts && teacherInfo) ? (
         <div>
@@ -46,7 +58,7 @@ const MyProfile = (props) => {
             </div>
             <div >
                 {posts.map((post) => (
-                    <div className="home-container" onClick={() => showPost(post)}
+                    <div className="home-container" 
                     key={post.id}>
                     <PostItem 
                         content={post.content}
@@ -59,7 +71,9 @@ const MyProfile = (props) => {
                         />
                     </div>
                     <div>
-                        <UpdatePost />
+                        <UpdatePost
+                          postId={post.id}
+                           />
                     </div>
                     </div>
                 ))}
@@ -71,3 +85,6 @@ const MyProfile = (props) => {
 }
 
 export default MyProfile
+
+
+//onClick={() => showPost(post)}

@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Delete = (props) => {
   
-  let { id } = props.postId 
+ // let { id } = props.postId 
   let navigate = useNavigate()
 
   const deletePost = async () => {
