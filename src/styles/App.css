@@ -41,12 +41,10 @@ h1 {
   background-image: url('https://images.unsplash.com/photo-1492724724894-7464c27d0ceb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80');
   padding: 15px;
   color: rgb(255, 255, 255);
-  opacity: 0.9;
+  
 }
 
-.post-title:hover {
-  opacity: 1;
-}
+
 
 img {
   width: 600px;
@@ -107,12 +105,23 @@ img {
   margin: 10px;
   font-size: 30px;
   font-family: 'Roboto', sans-serif;
-  
+  width: 900px;
+  animation: space 2s 1;
 }
+
+@keyframes space {
+  50% {
+    letter-spacing: 0.2rem;
+  }
+}
+
 .comment-container {
   
   text-align: center;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
  .submit-container {
@@ -121,6 +130,12 @@ img {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-image: url('https://images.unsplash.com/photo-1492724724894-7464c27d0ceb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80');
+  background-repeat:no-repeat;
+  margin: 50px;
+  height: 700px;
+  width: 900px;
+  
 }
  .side-nav {
   font-size: 1.5rem;
@@ -224,13 +239,15 @@ nav a {
   padding: 10px;
   font-size: 20px;
   margin: 10px;
+  width: 300px;
 }
 
 .comm1 {
   padding: 10px;
   font-size: 20px;
-  height: 100px;
-  margin: 10px;
+  height: 150px;
+  width: 300px;
+  margin: 25 5px;
 }
 
 .update-container {
