@@ -8,6 +8,7 @@ export const SignInUser = async (data) => {
     
     localStorage.setItem('token', res.data.token)
     
+    
     return res.data.user
   } catch (error) {
     throw error
