@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 
 const Update = (props) => {
-    let { id } = useParams()
+    //let { id } = useParams()
     let navigate = useNavigate()
 
  const [ title, setTitle ] = useState('')   
@@ -14,18 +14,19 @@ const Update = (props) => {
 
  
 const getPostToUpdate = async () => {
-     await axios.put(`http://localhost:3001/posts/${id}`, {
+     await axios.put(`http://localhost:3001/posts/${props.postId}`, {
      title: title,
      content: content,
      image: image,
      
     });
+
 }
 
 const handleSubmit= (e) => {
      e.preventDefault()
      getPostToUpdate()
-     navigate('/postspage')
+     navigate('/')
      window.location.reload(false)
 }
 
