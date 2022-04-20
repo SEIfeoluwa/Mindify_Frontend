@@ -43,7 +43,7 @@ const Register = () => {
             <div className="card-overlay centered">
             <h1 className="reg-title">MINDIFY</h1>
                 <form className="col" onSubmit={handleSubmit}>
-                    <div className="input-wrapper">
+                    <div className="input-wrapper1">
                         <label htmlFor="name">First Name</label>
                         <br></br>
                         <input className="input1"
@@ -55,7 +55,7 @@ const Register = () => {
                         required
                         />
                     </div>
-                    <div className="input-wrapper">
+                    <div className="input-wrapper1">
                         <label htmlFor="name">Last Name</label>
                         <br></br>
                         <input className="input1"
@@ -67,7 +67,7 @@ const Register = () => {
                         required
                         />
                     </div>
-                    <div className="input-wrapper">
+                    <div className="input-wrapper1">
                         <label htmlFor="username">Username</label>
                         <br></br>
                         <input className="input1"
@@ -79,7 +79,7 @@ const Register = () => {
                         required
                         />
                     </div>
-                    <div className="input-wrapper">
+                    <div className="input-wrapper1">
                         <label htmlFor="email">Email</label>
                         <br></br>
                         <input className="input1"
@@ -91,7 +91,7 @@ const Register = () => {
                         required
                         />
                     </div>
-                    <div className="input-wrapper">
+                    <div className="input-wrapper1">
                         <label htmlFor="password">Password</label>
                         <br></br>
                         <input className="input1"
@@ -103,7 +103,7 @@ const Register = () => {
                         required
                         />
                     </div>
-                    <div className="input-wrapper">
+                    <div className="input-wrapper1">
                         <label htmlFor="confirmPassword">Confirm Password</label>
                         <br></br>
                         <input className="input1"
