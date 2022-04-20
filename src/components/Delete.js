@@ -7,11 +7,11 @@ import { useNavigate } from 'react-router-dom'
 
 const Delete = (props) => {
   
-  let { id } = props.postId 
+ // let { id } = props.postId 
   let navigate = useNavigate()
 
   const deletePost = async () => {
-        await axios.delete(`http://localhost:3001/posts/${id}`);
+        await axios.delete(`http://localhost:3001/posts/${props.postId}`);
   }
 
    const handleDelete = () => {
