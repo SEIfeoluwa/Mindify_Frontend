@@ -8,7 +8,7 @@ const CreatePost = (props) => {
 
   const teacher = props.teacher
 
-  //let navigate = useNavigate()
+  let navigate = useNavigate()
 
   const [ newPost, setNewPost ] = useState({
     title: '',
@@ -17,11 +17,11 @@ const CreatePost = (props) => {
     image: '',
   })
 
-  let { id } = useParams()
+ 
  const getNewPost = async () => {
   console.log(newPost)
      await axios({
-       url: `http://localhost:3001/posts/${id}`,
+       url: `http://localhost:3001/posts/${teacher.id}`,
        method: 'post',
        data: newPost
      })
@@ -29,15 +29,15 @@ const CreatePost = (props) => {
 
  const handleChange = (e) => {
       setNewPost({...newPost, [e.target.name]: e.target.value })
-     
       console.log(e.target.name)
       console.log(e.target.value)
  } 
 
- const submitFunc = () => {
+ const submitFunc = (e) => {
+     e.preventDefault()
     getNewPost()
-   // navigate('/')
-  //  window.location.reload(false)
+    navigate('/')
+    window.location.reload(false)
  }
 
   return (
