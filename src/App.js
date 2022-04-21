@@ -64,8 +64,8 @@ const App = () => {
 
         <Route path="/" element={ <Landing /> } />
        
-        <Route path="/home/posts/postdetail/:id" element={ <PostDetails /> } /> 
-       <Route path="/" element={ <Home />} />
+        <Route path="/posts/postdetail/:id" element={ <PostDetails /> } /> 
+       <Route path="/posts" element={ <Home />} />
       
 
         <Route path="/IPP" element={ <IPP /> } />
