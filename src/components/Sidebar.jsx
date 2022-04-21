@@ -6,7 +6,7 @@ const Sidebar = ({ authenticated, teacher, handleLogOut }) => {
     if (teacher) {
       authenticatedOptions = (
             <ul className="nav-links">
-             <li className="item doc"><Link to="/"><i className="fa-solid fa-house"></i><span>Home</span></Link></li>
+             <li className="item doc"><Link to="/home"><i className="fa-solid fa-house"></i><span>Home</span></Link></li>
              <li className="item doc"><Link to="/prof"><i className="fa-solid fa-user"></i><span>My Profile</span></Link></li>
              <li className="item doc"><Link to="/planner"><i className="fa-solid fa-calendar-check"></i><span>Your Goals</span></Link></li>
              <li className="item doc"><Link to="/createpost"><i className="fa-solid fa-square-plus"></i><span>Make A Post</span></Link></li>
