@@ -41,10 +41,12 @@ const Register = () => {
         <div>
             <Sidebar />
             <div className="card-overlay centered">
+            <h1 className="reg-title">MINDIFY</h1>
                 <form className="col" onSubmit={handleSubmit}>
-                    <div className="input-wrapper">
+                    <div className="input-wrapper1">
                         <label htmlFor="name">First Name</label>
-                        <input
+                        <br></br>
+                        <input className="input1"
                         onChange={handleChange}
                         name="firstName"
                         type="text"
@@ -53,9 +55,10 @@ const Register = () => {
                         required
                         />
                     </div>
-                    <div className="input-wrapper">
+                    <div className="input-wrapper1">
                         <label htmlFor="name">Last Name</label>
-                        <input
+                        <br></br>
+                        <input className="input1"
                         onChange={handleChange}
                         name="lastName"
                         type="text"
@@ -64,9 +67,10 @@ const Register = () => {
                         required
                         />
                     </div>
-                    <div className="input-wrapper">
+                    <div className="input-wrapper1">
                         <label htmlFor="username">Username</label>
-                        <input
+                        <br></br>
+                        <input className="input1"
                         onChange={handleChange}
                         name="username"
                         type="text"
@@ -75,9 +79,10 @@ const Register = () => {
                         required
                         />
                     </div>
-                    <div className="input-wrapper">
+                    <div className="input-wrapper1">
                         <label htmlFor="email">Email</label>
-                        <input
+                        <br></br>
+                        <input className="input1"
                         onChange={handleChange}
                         name="email"
                         type="email"
@@ -86,34 +91,38 @@ const Register = () => {
                         required
                         />
                     </div>
-                    <div className="input-wrapper">
+                    <div className="input-wrapper1">
                         <label htmlFor="password">Password</label>
-                        <input
+                        <br></br>
+                        <input className="input1"
                         onChange={handleChange}
                         type="password"
                         name="password"
+                        placeholder="Password"
                         value={formValues.password}
                         required
                         />
                     </div>
-                    <div className="input-wrapper">
+                    <div className="input-wrapper1">
                         <label htmlFor="confirmPassword">Confirm Password</label>
-                        <input
+                        <br></br>
+                        <input className="input1"
                         onChange={handleChange}
                         type="password"
                         name="confirmPassword"
+                        placeholder="Confirm password"
                         value={formValues.confirmPassword}
                         required
                         />
                     </div>
-                    <button
+                    <button className="s-btn1"
                         disabled={
                         !formValues.email ||
                         (!formValues.password &&
                             formValues.confirmPassword === formValues.password)
                         }
                     >
-                        Sign In
+                        Register
                     </button>
                 </form>
             </div>

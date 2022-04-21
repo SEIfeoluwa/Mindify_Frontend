@@ -13,6 +13,7 @@ import { CheckSession  } from './services/Auth'
 import CommentsForm from './components/CommentsForm';
 import Sidebar from './components/Sidebar';
 import IPP from './pages/IPP'
+import Planner from './components/Planner';
 
 
 const App = () => {
@@ -71,10 +72,11 @@ const App = () => {
         teacher={ teacher }
         /> } /> 
         <Route path="/posts/postdetail/:id/commentsform" element={ <CommentsForm /> } />
-        <Route path="/MyProfile" element={ 
+        <Route path="/prof" element={ 
           <MyProfile
           teacher={ teacher } 
           /> }/>
+          <Route path="/planner" element={ <Planner /> } />
       </Routes> 
       </main>
     </div>

@@ -19,18 +19,22 @@ const Login = (props) => {
         username: "",
         password: "",
         })
+        console.log(payload.id)
+        localStorage.setItem('user', payload.id)
         props.setTeacher(payload)
         props.toggleAuthenticated(true)
-        navigate('/')
+         navigate('/')
     }
     return (
         <div>
             <Sidebar />
-            <div className='login'> 
+            <div className="login"> 
+            <h1 className="reg-title">MINDIFY</h1>
                 <form className='log' onSubmit={handleSubmit}>
+                    <div className="welcome">Welcome! Please Log in</div>
                     <div className='input-wrapper'>
                         <label htmlFor='email'>Username</label>
-                        <input 
+                         <input className="input2"
                             onChange={handleChange}
                             name="username"
                             type="text"
@@ -38,10 +42,8 @@ const Login = (props) => {
                             value={formValues.username}
                             required
                         />
-                    </div>
-                    <div className="input-wrapper">
                         <label htmlFor="password">Password</label>
-                        <input
+                        <input className="input2"
                         onChange={handleChange}
                         type="password"
                         name="password"
@@ -49,7 +51,7 @@ const Login = (props) => {
                         required
                         />
                     </div>
-                    <button disabled={!formValues.username || !formValues.password}>Log In</button>
+                    <button className="s-btn1" disabled={!formValues.username || !formValues.password}>Log In</button>
                 </form> 
             </div>
         </div>

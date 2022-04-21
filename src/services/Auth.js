@@ -7,7 +7,12 @@ export const SignInUser = async (data) => {
     // Set the current signed in users token to localStorage
     
     localStorage.setItem('token', res.data.token)
+<<<<<<< HEAD
     console.log(res.data.user)
+=======
+    
+    
+>>>>>>> main
     return res.data.user
   } catch (error) {
     throw error

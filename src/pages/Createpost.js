@@ -1,14 +1,13 @@
 import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import SideBar from '../components/Sidebar'
 
 const CreatePost = (props) => {
 
-  const teacher = props.teacher
+  const teacher = props.teacher.id
   console.log(teacher)
-
   let navigate = useNavigate()
 
   const [ newPost, setNewPost ] = useState({
@@ -18,9 +17,13 @@ const CreatePost = (props) => {
     image: '',
   })
 
-//  const getNewPost = async () => {
-//      await 
-//  }
+ const getNewPost = async () => {
+     await axios({
+       url: `http://localhost:3001/posts/${teacher}`,
+       method: 'post',
+       data: newPost
+     })
+ }
 
  const handleChange = (e) => {
       setNewPost({...newPost, [e.target.name]: e.target.value })
@@ -29,6 +32,7 @@ const CreatePost = (props) => {
 
  const handleSubmit = (e) => {
    e.preventDefault()
+<<<<<<< HEAD
     // getNewPost()
    axios({
        url: `http://localhost:3001/posts/${teacher.id}`,
@@ -38,6 +42,11 @@ const CreatePost = (props) => {
 
     // navigate('/')
     // window.location.reload(false)
+=======
+    getNewPost()
+    navigate('/')
+    window.location.reload(false)
+>>>>>>> main
  }
 
   return (
@@ -45,10 +54,7 @@ const CreatePost = (props) => {
     <div className="s-container">
        <h2 className="new-post">Add A New Post</h2>
     <div>
-
-      <SideBar />
-       
-
+    
           <form className="submit-form" onSubmit={handleSubmit}> 
                   <input className="input" type="text" value={newPost.title} onChange={handleChange} name={'title'} placeholder={'title'} />
                   <input className="input" type="text" value={newPost.tag} onChange={handleChange} name={'tag'} placeholder={'tags'} />
