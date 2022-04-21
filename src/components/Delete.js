@@ -1,5 +1,4 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
@@ -7,7 +6,6 @@ import { useNavigate } from 'react-router-dom'
 
 const Delete = (props) => {
   
- // let { id } = props.postId 
   let navigate = useNavigate()
 
   const deletePost = async () => {
@@ -16,7 +14,7 @@ const Delete = (props) => {
 
    const handleDelete = () => {
       deletePost()
-       navigate('/')
+      navigate('/')
    }
 
   return (
