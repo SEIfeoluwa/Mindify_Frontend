@@ -63,16 +63,11 @@ const App = () => {
         <Route path='/register' element={ <Register /> }/>
 
         <Route path="/" element={ <Landing /> } />
-        <Route path="/home" element={ <Home />} />
-<<<<<<< HEAD
-        <Route path="/home/posts/postdetail/:id" element={ <PostDetails /> } /> 
-=======
+       
         <Route path="/posts/postdetail/:id" element={ <PostDetails /> } /> 
+       <Route path="/posts" element={ <Home />} />
+      
 
-        <Route path="/" element={ <Home />} />
-        <Route path="/postdetail/:id" element={ <PostDetails /> } /> 
-
->>>>>>> 672368919061117290e2ddb0be939da3767a416b
         <Route path="/IPP" element={ <IPP /> } />
         <Route path="/createpost" element={ 
         <CreatePost 
