@@ -17,6 +17,7 @@ const Delete = (props) => {
    const handleDelete = () => {
       deletePost()
        navigate('/')
+       window.location.reload(false)
    }
 
   return (
