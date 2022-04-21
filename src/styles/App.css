@@ -55,7 +55,6 @@ img {
   
 }
 
-
 .list-item {
   text-align: center;
   padding: 10px;
@@ -137,16 +136,8 @@ img {
   width: 900px;
   
 }
- .side-nav {
-  font-size: 1.5rem;
-  width: 250px;
-  height: 100%;
-  position: fixed;
-  padding-top: 120px;
-  left: 0;
-  
-}
 
+<<<<<<< HEAD
 .nav-links {
   list-style: none;
   position: relative;
@@ -199,6 +190,8 @@ header {
   text-align: center;
 
 }
+=======
+>>>>>>> 672368919061117290e2ddb0be939da3767a416b
 .input {
  padding: 10px;
   margin: 20px;
@@ -512,14 +505,13 @@ label {
   box-shadow: 10px 5px 5px rgb(68, 42, 77);
   height: 300px;
   width: 500px;
- 
 }
-
 .cal-wrapper {
   background-color: rgb(195, 150, 247);
   margin-bottom: 35px;
   padding: 10px;
 }
+
 
 .landing-container {
   margin: 50px 25px;
@@ -553,6 +545,7 @@ label {
   height: 500px;
 }
 
+<<<<<<< HEAD
 @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
@@ -664,3 +657,47 @@ img {
 }
 
 }
+=======
+/* Css for the side bar*/
+.side-nav {
+  font-size: 1.5rem;
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  padding-top: 120px;
+  left: 0;
+  
+}
+
+.nav-links {
+  list-style: none;
+  position: relative;
+}
+.nav-links li {
+  padding: 10px 0;
+} 
+.nav-links li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.butt {
+  background-color: rgba(200, 160, 230, 1);
+  color: white;
+  padding: 10px 30px;
+  border-radius: 25px;
+  border-color: rgba(200, 160, 230, 1);
+}
+.butt:hover {
+  background: white;
+  color: rgba(200, 160, 230, 1);
+  border-color: white;
+}
+/* .nav-links > li:last-of-type {
+  padding-top: 550px;
+} */
+ 
+
+
+
+>>>>>>> 672368919061117290e2ddb0be939da3767a416b
