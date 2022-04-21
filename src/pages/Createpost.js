@@ -7,6 +7,7 @@ import SideBar from '../components/Sidebar'
 const CreatePost = (props) => {
 
   const teacher = props.teacher
+  console.log(teacher)
 
   let navigate = useNavigate()
 
@@ -29,11 +30,12 @@ const CreatePost = (props) => {
  const handleSubmit = (e) => {
    e.preventDefault()
     // getNewPost()
-    axios({
-       url: `http://localhost:3001/posts/${teacher._id}`,
+   axios({
+       url: `http://localhost:3001/posts/${teacher.id}`,
        method: 'post',
        data: newPost
      })
+
     // navigate('/')
     // window.location.reload(false)
  }
