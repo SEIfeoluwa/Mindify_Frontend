@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Header from './components/Header'
+// import Header from './components/Header'
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Register from './pages/Register';
@@ -44,14 +44,10 @@ const App = () => {
 
   return (
     <div>
-      <Header 
-        authenticated={authenticated}
-        teacher={ teacher }
-        handleLogOut={handleLogOut}
-      />
       <Sidebar 
       authenticated={authenticated}
       teacher={ teacher }
+      handleLogOut={handleLogOut}
       />
       <main>
        <Routes>
@@ -65,9 +61,14 @@ const App = () => {
           teacher={ teacher }
           /> }/>
         <Route path='/register' element={ <Register /> }/>
+
         <Route path="/" element={ <Landing /> } />
         <Route path="/home" element={ <Home />} />
         <Route path="/posts/postdetail/:id" element={ <PostDetails /> } /> 
+
+        <Route path="/" element={ <Home />} />
+        <Route path="/postdetail/:id" element={ <PostDetails /> } /> 
+
         <Route path="/IPP" element={ <IPP /> } />
         <Route path="/createpost" element={ 
         <CreatePost 
