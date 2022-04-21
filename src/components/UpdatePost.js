@@ -26,7 +26,7 @@ const getPostToUpdate = async () => {
 const handleSubmit= (e) => {
      e.preventDefault()
      getPostToUpdate()
-     navigate('/')
+     navigate('/home')
      window.location.reload(false)
 }
 
