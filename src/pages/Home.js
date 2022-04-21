@@ -21,7 +21,7 @@ const getPosts = async () => {
 
 useEffect(() => {
     getPosts()
- }, [posts])
+ }, [])
 
   return (
     <div>
