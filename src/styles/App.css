@@ -439,6 +439,12 @@ label {
   height: 300px;
   width: 500px;
 }
+.cal-wrapper {
+  background-color: rgb(195, 150, 247);
+  margin-bottom: 35px;
+  padding: 10px;
+}
+
 /* Css for the side bar*/
 .side-nav {
   font-size: 1.5rem;
@@ -477,3 +483,6 @@ label {
 /* .nav-links > li:last-of-type {
   padding-top: 550px;
 } */
+ 
+
+

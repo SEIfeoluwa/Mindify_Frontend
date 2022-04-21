@@ -10,6 +10,8 @@ const Planner = () => {
     const current = new Date();
     const getDate = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
 
+    const [date, setDate] = useState(new Date())
+
  const [goals, setGoals] = useState([
           'Do more yoga',
           'Study',
@@ -23,10 +25,12 @@ const Planner = () => {
           let newList = [...goals, getGoal] 
           console.log(newList)
               setGoals(newList) 
+             
         }
      
          const handleChange = (event) => {
            changeGoal(event.currentTarget.value) 
+          
         }
      
          const removeGoal = (index) => {
@@ -35,8 +39,15 @@ const Planner = () => {
            setGoals(goalList)
          }
          
- 
+   
 
+   useEffect(() => {
+       localStorage.setItem("goals", JSON.stringify(goals))
+   }, [goals])
+ 
+let aGoal
+
+ 
   return (
     <div className="goals-container">
         
@@ -48,9 +59,12 @@ const Planner = () => {
       <PlannerItem  goals={goals}  removeGoal={removeGoal}/>
       <img className="quote" src=" https://quotefancy.com/media/wallpaper/3840x2160/822-Nelson-Mandela-Quote-It-always-seems-impossible-until-it-s-done.jpg"></img>
       </form>
-      <Calendar className="calendar"/>
+      <div className="cal-wrapper">
+      <Calendar className="calendar"  onChange={setDate} value={date} />
+      </div>
+     
     </div>
   )
 }
-
+ 
 export default Planner
