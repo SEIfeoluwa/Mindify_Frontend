@@ -177,9 +177,27 @@ header {
   background: white;
 }
 
-nav a {
+.item {
   text-decoration-line: none;
-  padding: 0 5px 0 5px;
+  padding: 5px 10px;
+  font-size: 25px;
+  margin: 15px;
+  border: 3px solid rgb(181, 121, 227);
+
+}
+
+.item:hover {
+  background-color: rgb(181, 121, 227);
+  color: rgb(255, 255, 255);
+}
+
+.link-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
 }
 .input {
  padding: 10px;
@@ -533,4 +551,116 @@ label {
   color: rgb(255, 255, 255);
   padding: 10px;
   height: 500px;
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+   
+    .log {
+    height: 600px;
+    width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+   }
+
+   .reg-title .welcome{
+    font-size: 1rem;
+    
+  }
+
+  .input2 {
+    width: 200px;
+  }
+
+  .landing-container {
+    height: 300px;
+    font-size: 2rem;
+    margin-top: 5rem;
+    background-size: 500px 300px;
+    background-repeat: no-repeat;
+  }
+  
+  .landing-title {
+    margin: 0 auto;
+    font-size: 3rem;
+    padding: 2px;
+    animation: spaceletters 5s infinite;
+}
+
+@keyframes spaceletters {
+  50% {
+    letter-spacing: 1rem;
+    color: rgb(156, 101, 244);
+  }
+}
+
+.reg-title {
+  font-size: 1rem;
+  
+}
+
+.col {
+  height: 500px;
+  width: 400px;
+  margin: 0 auto;
+  padding: 5px;
+  background-repeat: no-repeat;
+}
+
+.input1 {
+  padding: 5px;
+  margin: 5px auto;
+  width: 180px;
+  font-size: 16px;
+  border: 1px solid rgb(68, 42, 77);
+  border-radius: 10px;
+  box-shadow: 5px 2px 2px rgb(68, 42, 77);
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.s-btn1 {
+  width: 150px;
+  padding: 5px;
+  font-size: 16px;
+  margin: 20px auto;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 5px 2px 2px rgb(68, 42, 77);
+}
+
+.home-container {
+  margin: 0 auto;
+  
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.post-title {
+  font-size: 16px;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+img {
+  width: 300px;
+  padding: 5px;
+  margin: 10px auto;
+  box-shadow: 0px 2px 5px 2px rgb(128, 129, 130);
+}
+
+.post-content {
+  margin: 5px 0;
+  width: 350px;
+  
+}
+
 }

@@ -67,7 +67,7 @@ const App = () => {
         <Route path='/register' element={ <Register /> }/>
         <Route path="/" element={ <Landing /> } />
         <Route path="/home" element={ <Home />} />
-        <Route path="/posts/postdetail/:id" element={ <PostDetails /> } /> 
+        <Route path="/home/posts/postdetail/:id" element={ <PostDetails /> } /> 
         <Route path="/IPP" element={ <IPP /> } />
         <Route path="/createpost" element={ 
         <CreatePost 
