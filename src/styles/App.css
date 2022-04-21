@@ -599,8 +599,11 @@ img {
   width: 350px;
   
 }
-
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 499a05a81f43464652fc8827403ffd014c9c8686
 /* Css for the side bar*/
 .side-nav {
   font-size: 1.5rem;
@@ -609,7 +612,6 @@ img {
   position: fixed;
   padding-top: 120px;
   left: 0;
-  
 }
 
 .nav-links {
@@ -639,7 +641,4 @@ img {
 /* .nav-links > li:last-of-type {
   padding-top: 550px;
 } */
- 
-
-
 

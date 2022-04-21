@@ -10,7 +10,7 @@ const Home = () => {
 
  let navigate = useNavigate()  
     const showPost = (posts) => {  //after clicking on post it will go to PostDetails
-        navigate(`/postdetail/${posts.id}`)
+        navigate(`/posts/postdetail/${posts.id}`)
     } 
 
 const getPosts = async () => {
