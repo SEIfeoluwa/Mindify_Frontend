@@ -455,3 +455,31 @@ label {
   padding: 10px;
   margin: 25px;
 }
+
+.date {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  padding: 10px;
+  margin: 5px;
+  background-color:rgba(87, 55, 136, 0.6);
+}
+
+.planner-link {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  padding: 10px;
+  margin: 35px;
+  background-color:rgb(87, 55, 136);
+}
+
+.calendar {
+  padding: 10px;
+  margin: 25px;
+  box-shadow: 10px 5px 5px rgb(68, 42, 77);
+  height: 300px;
+  width: 500px;
+}
