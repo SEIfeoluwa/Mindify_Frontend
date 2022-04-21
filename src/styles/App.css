@@ -137,58 +137,6 @@ img {
   
 }
 
-.nav-links {
-  list-style: none;
-  position: relative;
-}
-.nav-links li {
-  padding: 10px 0;
-} 
-.nav-links li a {
-  color: black;
-  text-decoration: none;
-  font-size: 1.5rem;
-}
-.butt {
-  background-color: rgba(200, 160, 230, 1);
-  color: white;
-  padding: 10px 30px;
-  border-radius: 25px;
-  border-color: rgba(200, 160, 230, 1);
-}
-.butt:hover {
-  background: white;
-  color: rgba(200, 160, 230, 1);
-  border-color: white;
-}
-header {
-  padding: 10px 0 10px 0;
-  text-align: right;
-  background: white;
-}
-
-.item {
-  text-decoration-line: none;
-  padding: 5px 10px;
-  font-size: 25px;
-  margin: 15px;
-  border: 3px solid rgb(181, 121, 227);
-
-}
-
-.item:hover {
-  background-color: rgb(181, 121, 227);
-  color: rgb(255, 255, 255);
-}
-
-.link-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-}
 .input {
  padding: 10px;
   margin: 20px;
@@ -651,8 +599,8 @@ img {
   width: 350px;
   
 }
-
 }
+
 /* Css for the side bar*/
 .side-nav {
   font-size: 1.5rem;
@@ -661,7 +609,6 @@ img {
   position: fixed;
   padding-top: 120px;
   left: 0;
-  
 }
 
 .nav-links {
@@ -691,7 +638,4 @@ img {
 /* .nav-links > li:last-of-type {
   padding-top: 550px;
 } */
- 
-
-
 

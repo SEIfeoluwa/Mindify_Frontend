@@ -38,7 +38,7 @@ const MyProfile = (props) => {
     const showPost = (posts) => {  //after clicking on post it will go to PostDetails
         navigate(`/postdetail/${posts.id}`)
     } 
-
+// onClick={() => showPost(post)}
     return (posts && teacherInfo) ? (
         <div>
             <div>
@@ -47,7 +47,7 @@ const MyProfile = (props) => {
             <div >
                 {posts.map((post) => (
                     <div className="home-container" 
-                    key={post.id} onClick={() => showPost(post)}>
+                    key={post.id} >
                     <PostItem 
                         content={post.content}
                         image={post.image}
