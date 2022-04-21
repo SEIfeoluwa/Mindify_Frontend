@@ -3,14 +3,14 @@ import PostItem from '../components/PostItem'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect} from 'react' 
-import { Link } from "react-router-dom"
+
 
 const Home = () => {
  const [ posts, setPosts] = useState([])
 
  let navigate = useNavigate()  
     const showPost = (posts) => {  //after clicking on post it will go to PostDetails
-        navigate(`posts/postdetail/${posts.id}`)
+        navigate(`/postdetail/${posts.id}`)
     } 
 
 const getPosts = async () => {
