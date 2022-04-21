@@ -23,10 +23,12 @@ const Planner = () => {
           let newList = [...goals, getGoal] 
           console.log(newList)
               setGoals(newList) 
+             
         }
      
          const handleChange = (event) => {
            changeGoal(event.currentTarget.value) 
+          
         }
      
          const removeGoal = (index) => {
@@ -35,7 +37,13 @@ const Planner = () => {
            setGoals(goalList)
          }
          
+   
+
+   useEffect(() => {
+       localStorage.setItem("goals", JSON.stringify(goals))
+   }, [goals])
  
+   
 
   return (
     <div className="goals-container">
@@ -48,7 +56,9 @@ const Planner = () => {
       <PlannerItem  goals={goals}  removeGoal={removeGoal}/>
       <img className="quote" src=" https://quotefancy.com/media/wallpaper/3840x2160/822-Nelson-Mandela-Quote-It-always-seems-impossible-until-it-s-done.jpg"></img>
       </form>
+      <div className="cal-wrapper">
       <Calendar className="calendar"/>
+      </div>
     </div>
   )
 }
