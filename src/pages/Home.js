@@ -14,7 +14,7 @@ const Home = () => {
     } 
 
 const getPosts = async () => {
-   const list = await axios.get(`http://localhost:3001/posts`)
+   const list = await axios.get(`https://mighty-wildwood-47895.herokuapp.com/posts`)
    console.log(list.data)
    setPosts(list.data)
 }
