@@ -17,7 +17,7 @@ const Sidebar = ({ authenticated, teacher, handleLogOut }) => {
     }
     const publicOptions = (
         <ul className="nav-links"> 
-          <li className="item doc"><Link to="/"><i className="fa-solid fa-house"></i><span>Home</span></Link></li>
+          <li className="item doc"><Link to="/home"><i className="fa-solid fa-house"></i><span>Home</span></Link></li>
           <li className="item doc"><Link to="/register"><i className="fa-solid fa-address-card"></i><span>Register</span></Link></li>
           <li className="item doc"><Link to="/login"><i className="fa-solid fa-arrow-right-to-bracket"></i><span>Login</span></Link></li>
           <li className="item doc"><Link to="/planner"><i className="fa-solid fa-calendar-check"></i><span>Your Goals</span></Link></li>

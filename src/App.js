@@ -14,11 +14,14 @@ import Sidebar from './components/Sidebar';
 import IPP from './pages/IPP'
 import Planner from './components/Planner';
 import Landing from './pages/Landing';
+import { useNavigate } from 'react-router-dom';
 
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
   const [teacher, setTeacher] = useState(null)
+
+  let navigate = useNavigate()
 
   const checkToken = async () => {
     const user = await CheckSession()
@@ -31,6 +34,7 @@ const App = () => {
     setTeacher(null)
     toggleAuthenticated(false);
     localStorage.clear();
+    navigate('/home')
   }
 
   useEffect(() => {
