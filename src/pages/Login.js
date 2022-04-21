@@ -23,11 +23,7 @@ const Login = (props) => {
         localStorage.setItem('user', payload.id)
         props.setTeacher(payload)
         props.toggleAuthenticated(true)
-<<<<<<< HEAD
-        navigate('/')
-=======
          navigate('/')
->>>>>>> main
     }
     return (
         <div>

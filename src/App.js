@@ -43,11 +43,6 @@ const App = () => {
 
   return (
     <div>
-      {/* <Header 
-        authenticated={authenticated}
-        teacher={ teacher }
-        handleLogOut={handleLogOut}
-      /> */}
       <Sidebar 
       authenticated={authenticated}
       teacher={ teacher }
