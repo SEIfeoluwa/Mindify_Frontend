@@ -32,21 +32,9 @@ const CreatePost = (props) => {
 
  const handleSubmit = (e) => {
    e.preventDefault()
-<<<<<<< HEAD
-    // getNewPost()
-   axios({
-       url: `http://localhost:3001/posts/${teacher.id}`,
-       method: 'post',
-       data: newPost
-     })
-
-    // navigate('/')
-    // window.location.reload(false)
-=======
     getNewPost()
     navigate('/')
     window.location.reload(false)
->>>>>>> main
  }
 
   return (
