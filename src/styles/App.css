@@ -595,11 +595,50 @@ img {
 }
 
 .post-content {
-  margin: 5px 0;
+
   width: 350px;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.item1 {
+  padding: 2px;
+  font-size: 15px;
+
+}
+
+.post-details {
+  margin: 10px 0;
+}
+
+.goals-form {
+  background-repeat:no-repeat;
+  margin: 5px auto;
+  height: 100%;
+  width: 400px;
+  padding: 5px;
   
 }
+
+
+.title {
+  font-size: 2rem;
 }
+
+.input3 {
+  width: 150px;
+}
+.g-btn {
+  width: 150px;
+}
+
+}
+
+
+
+
+}
+
 
 /* Css for the side bar*/
 .side-nav {
@@ -638,4 +677,21 @@ img {
 /* .nav-links > li:last-of-type {
   padding-top: 550px;
 } */
+
+ 
+
+.item1 {
+ border: 3px solid rgb(181, 121, 227);
+ padding: 5px 15px;
+ font-size: 20px;
+text-decoration: none;
+margin: 20px;
+}
+
+.item1:hover {
+  background-color: rgb(178, 128, 235);
+  color: rgb(255, 255, 255);
+}
+
+
 
