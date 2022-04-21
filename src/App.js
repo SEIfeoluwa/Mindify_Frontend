@@ -13,6 +13,7 @@ import { CheckSession  } from './services/Auth'
 import CommentsForm from './components/CommentsForm';
 import Sidebar from './components/Sidebar';
 import IPP from './pages/IPP'
+import Planner from './components/Planner';
 
 
 const App = () => {
@@ -76,6 +77,7 @@ const App = () => {
           <MyProfile
           teacher={ teacher } 
           /> }/>
+          <Route path="/planner" element={ <Planner /> } />
       </Routes> 
       </main>
     </div>
