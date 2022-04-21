@@ -8,6 +8,7 @@ const Header = ({ authenticated, teacher, handleLogOut }) => {
       <nav className="header">
         {/* <h3>Welcome {teacher.username}!</h3> */}
         <Link to="/">Home</Link>
+        <Link to="/planner">Planner</Link>
         <Link onClick={handleLogOut} to="/">
           Sign Out
         </Link>
