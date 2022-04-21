@@ -61,7 +61,6 @@ const App = () => {
           teacher={ teacher }
           /> }/>
         <Route path='/register' element={ <Register /> }/>
-        <Route path='/questions' element={ <Question />} />
         <Route path="/" element={ <Home />} />
         <Route path="/postdetail/:id" element={ <PostDetails /> } /> 
         <Route path="/IPP" element={ <IPP /> } />
