@@ -57,12 +57,12 @@ let aGoal
       <input className="input3" type="text" name="goal" onChange={handleChange}/>
       <button className="g-btn" onClick={(e) => addGoal(e) }>Add</button>
       <PlannerItem  goals={goals}  removeGoal={removeGoal}/>
-      <img className="quote" src=" https://quotefancy.com/media/wallpaper/3840x2160/822-Nelson-Mandela-Quote-It-always-seems-impossible-until-it-s-done.jpg"></img>
+     
       </form>
       <div className="cal-wrapper">
       <Calendar className="calendar"  onChange={setDate} value={date} />
       </div>
-     
+      <img className="quote" src=" https://quotefancy.com/media/wallpaper/3840x2160/822-Nelson-Mandela-Quote-It-always-seems-impossible-until-it-s-done.jpg"></img>
     </div>
   )
 }
