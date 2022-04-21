@@ -19,6 +19,7 @@ const Header = ({ authenticated, teacher, handleLogOut }) => {
   const publicOptions = (
     <nav className="header">
       <Link to="/" className="item">Home</Link>
+      <Link to="/questions" className="item">Question</Link>
       <Link to="/register" className="item">Register</Link>
       <Link to="/login" className="item">Login</Link>
     </nav>

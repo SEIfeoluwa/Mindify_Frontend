@@ -7,6 +7,7 @@ import Register from './pages/Register';
 import './styles/App.css';
 import PostDetails from './pages/PostDetails';
 import CreatePost from './pages/Createpost';
+import Question from './pages/Question';
 import Home from './pages/Home';
 import MyProfile from './pages/MyProfile';
 import { CheckSession  } from './services/Auth'
@@ -64,6 +65,7 @@ const App = () => {
           teacher={ teacher }
           /> }/>
         <Route path='/register' element={ <Register /> }/>
+        <Route path='/questions' element={ <Question />} />
         <Route path="/" element={ <Home />} />
         <Route path="/posts/postdetail/:id" element={ <PostDetails /> } /> 
         <Route path="/IPP" element={ <IPP /> } />
