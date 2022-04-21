@@ -75,6 +75,3 @@ const MyProfile = (props) => {
 }
 
 export default MyProfile
-
-
-//onClick={() => showPost(post)}
