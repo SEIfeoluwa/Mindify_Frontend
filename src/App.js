@@ -14,6 +14,7 @@ import CommentsForm from './components/CommentsForm';
 import Sidebar from './components/Sidebar';
 import IPP from './pages/IPP'
 import Planner from './components/Planner';
+import Landing from './pages/Landing';
 
 
 const App = () => {
@@ -60,8 +61,14 @@ const App = () => {
           teacher={ teacher }
           /> }/>
         <Route path='/register' element={ <Register /> }/>
+
+        <Route path="/" element={ <Landing /> } />
+        <Route path="/home" element={ <Home />} />
+        <Route path="/posts/postdetail/:id" element={ <PostDetails /> } /> 
+
         <Route path="/" element={ <Home />} />
         <Route path="/postdetail/:id" element={ <PostDetails /> } /> 
+
         <Route path="/IPP" element={ <IPP /> } />
         <Route path="/createpost" element={ 
         <CreatePost 

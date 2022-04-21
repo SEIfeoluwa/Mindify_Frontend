@@ -7,9 +7,10 @@ const Header = ({ authenticated, teacher, handleLogOut }) => {
     authenticatedOptions = (
       <nav className="header">
         {/* <h3>Welcome {teacher.username}!</h3> */}
-        <Link to="/">Home</Link>
+        <Link to="/">Welcome</Link>
         <Link className="planner-link" to="/planner">Your Goals</Link>
         <Link onClick={handleLogOut} to="/">
+        <Link to="/home">Home</Link>
           Sign Out
         </Link>
       </nav>

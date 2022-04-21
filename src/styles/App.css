@@ -457,6 +457,39 @@ label {
   padding: 10px;
 }
 
+
+.landing-container {
+  margin: 50px 25px;
+  text-align: center;
+  background-image: url('https://images.unsplash.com/photo-1492724724894-7464c27d0ceb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80');
+  height: 500px;
+  font-size: 7rem;
+  color: rgb(255, 255, 255);
+}
+
+.landing-title {
+  margin-top: 40px;
+  font-size: 8rem;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  font-weight: bolder;
+  animation: spaceletters 5s infinite;
+}
+
+@keyframes spaceletters {
+  50% {
+    letter-spacing: 3rem;
+    color: rgb(156, 101, 244);
+  }
+}
+
+.landing-welcome {
+  font-size: 8rem;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  height: 500px;
+}
+
 /* Css for the side bar*/
 .side-nav {
   font-size: 1.5rem;
@@ -496,5 +529,6 @@ label {
   padding-top: 550px;
 } */
  
+
 
 
