@@ -4,12 +4,13 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect} from 'react' 
 
+
 const Home = () => {
  const [ posts, setPosts] = useState([])
 
  let navigate = useNavigate()  
     const showPost = (posts) => {  //after clicking on post it will go to PostDetails
-        navigate(`posts/postdetail/${posts.id}`)
+        navigate(`/posts/postdetail/${posts.id}`)
     } 
 
 const getPosts = async () => {
@@ -20,7 +21,7 @@ const getPosts = async () => {
 
 useEffect(() => {
     getPosts()
- }, [posts])
+ }, [])
 
   return (
     <div>
@@ -37,7 +38,7 @@ useEffect(() => {
               />
         </div>
        ))}
-       
+     
     </div>
   )
 }

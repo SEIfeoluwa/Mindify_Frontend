@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Header from './components/Header'
+// import Header from './components/Header'
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Register from './pages/Register';
@@ -13,6 +13,8 @@ import { CheckSession  } from './services/Auth'
 import CommentsForm from './components/CommentsForm';
 import Sidebar from './components/Sidebar';
 import IPP from './pages/IPP'
+import Planner from './components/Planner';
+import Landing from './pages/Landing';
 
 
 const App = () => {
@@ -42,14 +44,10 @@ const App = () => {
 
   return (
     <div>
-      <Header 
-        authenticated={authenticated}
-        teacher={ teacher }
-        handleLogOut={handleLogOut}
-      />
       <Sidebar 
       authenticated={authenticated}
       teacher={ teacher }
+      handleLogOut={handleLogOut}
       />
       <main>
        <Routes>
@@ -63,8 +61,13 @@ const App = () => {
           teacher={ teacher }
           /> }/>
         <Route path='/register' element={ <Register /> }/>
-        <Route path="/" element={ <Home />} />
+
+        <Route path="/" element={ <Landing /> } />
+       
         <Route path="/posts/postdetail/:id" element={ <PostDetails /> } /> 
+       <Route path="/posts" element={ <Home />} />
+      
+
         <Route path="/IPP" element={ <IPP /> } />
         <Route path="/createpost" element={ 
         <CreatePost 
@@ -75,6 +78,7 @@ const App = () => {
           <MyProfile
           teacher={ teacher } 
           /> }/>
+          <Route path="/planner" element={ <Planner /> } />
       </Routes> 
       </main>
     </div>
