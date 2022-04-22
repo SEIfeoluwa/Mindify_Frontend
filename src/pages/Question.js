@@ -29,24 +29,26 @@ const Question = ({ authenticated, teacher }) => {
     return(
         <div>
             <div className="center">
-                <h1>Ask a Question</h1>
+                <h1 className="ask-q">QUESTIONS</h1>
             </div>
             <div className="newQ">
-            <Link to={`/questions/new`}>Ask a Question</Link>
+            <Link to={`/questions/new`} className="ask">Ask a Question</Link>
             </div>
             {questions.map((question) => (
                 <div className="home-container" key={question.id}>
                     <div>
-                        <h3>Name:</h3>
-                        {question.user.name}
+                        <h3 className="quest-class">Name:</h3>
+                      <p className="quest-title">  {question.user.name} </p>
                     </div>
-                    <h3>Question:</h3>
-                    <p>{question.title}</p>
-                    <p>{question.content}</p>
-                    <div>
-                        <h3>replies:</h3>
+                    <h3 className="quest-class">Question:</h3>
+                    <div className="quest-title">
+                    <p className="q-title">{question.title}</p>
+                    <p className="quest-cont">{question.content}</p>
+                    </div>
+                    <div className="centered">
+                        <h3 className="quest-class"> Replies:</h3>
                         {question.replies.map((reply) => (
-                            <p key={reply.content}>{reply.content}</p>
+                            <p className="quest-title" key={reply.content}>{reply.content}</p>
                         ))}
                     </div>
                     <div>

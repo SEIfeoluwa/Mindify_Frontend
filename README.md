@@ -46,4 +46,4 @@
 ##### https://askthescientists.com/, healthline.com, Self.com, https://everydaypower.com/,  eatthis.com, Health Harvard,  https://askthescientists.com/
 ***
 ##### Image credits:
-#####  The Yoga Collaborative, SHRM,  Starmark Fitness Studio,  Gaia Herbs, Everyday Health, News Medical, Quote Fancy
+#####  The Yoga Collaborative, SHRM,  Starmark Fitness Studio,  Gaia Herbs, Everyday Health, News Medical, Quote Fancy, Marcus Woodbrirge, Daniel Blah
