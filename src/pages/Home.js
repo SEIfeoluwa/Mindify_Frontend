@@ -1,17 +1,9 @@
 import React from 'react'
 import PostItem from '../components/PostItem'
-import axios from 'axios'
+import Axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect} from 'react' 
-
-<<<<<<< HEAD
-=======
 import  MotivationComp  from '../components/MotivationComp'
-
-import { environment } from '..'
->>>>>>> ffe1be0e1804071b8fe75d763e7fc27cf3131e34
-
-
 
 const Home = () => {
  const [posts, setPosts] = useState([])
