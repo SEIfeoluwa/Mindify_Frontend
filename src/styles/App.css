@@ -8,7 +8,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 20px 45px;
+  margin: 30px 45px;
   
 }
 
@@ -182,8 +182,9 @@ img {
   padding: 15px;
   color: rgb(255, 255, 255);
   margin: 10px;
-  font-size: 30px;
+  font-size: 3rem;
   font-family: 'Roboto', sans-serif;
+  animation: space 2s 1;
 }
 
 .in-cont {
@@ -803,4 +804,46 @@ margin: 20px;
   box-shadow: 10px 5px 5px rgb(68, 42, 77);
   margin: 35px auto;
 
+}
+
+.ask-q {
+  font-size: 3rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  background-image: url('https://images.unsplash.com/photo-1492724724894-7464c27d0ceb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80');
+  padding: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.ask {
+  background-color: rgb(87, 55, 136);
+  color: rgb(255, 255, 255);
+  width: 250px;
+  padding: 10px;
+  font-size: 25px;
+  margin: 35px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 10px 5px 5px rgb(68, 42, 77);
+  text-decoration: none;
+}
+
+.ask:hover {
+  background-color: rgb(183, 148, 236);
+}
+
+.quest-class {
+  background-color: rgb(250, 208, 188);
+  border-radius: 15px;
+  padding: 5px 15px;
+  margin: 20px;
+ width: 150px;
+ font-size: 1.5rem;
+}
+
+.quest-title {
+  border:2px solid rgb(250, 208, 188);
+  border-radius: 15px;
+  padding: 10px 25px;
+  box-shadow: 10px 5px 5px rgb(68, 42, 77);
 }
