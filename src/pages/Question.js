@@ -20,14 +20,7 @@ const Question = ({ authenticated, teacher }) => {
 
     useEffect(() => {
         const run = async () => {
-            let repArr = []
             await getQuestions()
-        // questions.replies.foreach((question) => {
-        //     repArr.push(question)
-            // setReplies([reply, ...replies])
-
-        // })
-        // console.log(repArr)
         }
         run()
         
@@ -46,12 +39,10 @@ const Question = ({ authenticated, teacher }) => {
             </div>
             {questions.map((question) => (
                 <div className="home-container" key={question.id}>
-                    {/* <div>
+                    <div>
                         <h3>Name:</h3>
-                        {question.user.map((user) => (
-                            <p key={user.name}>{user.name}</p>
-                        ))}
-                    </div> */}
+                        {question.user.name}
+                    </div>
                     <h3>Question:</h3>
                     <p>{question.title}</p>
                     <p>{question.content}</p>

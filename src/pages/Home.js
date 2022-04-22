@@ -5,6 +5,7 @@ import { useState, useEffect} from 'react'
 import  MotivationComp  from '../components/MotivationComp'
 import Client from '../services/api'
 
+
 const Home = () => {
  const [posts, setPosts] = useState([])
 
