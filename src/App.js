@@ -15,6 +15,7 @@ import CommentsForm from './components/CommentsForm';
 import Sidebar from './components/Sidebar';
 import IPP from './pages/IPP'
 import Planner from './components/Planner';
+import QuestionsForm from './components/QuestionsForm';
 
 
 const App = () => {
@@ -73,8 +74,16 @@ const App = () => {
           <MyProfile
           teacher={ teacher } 
           /> }/>
-          <Route path="/planner" element={ <Planner /> } />
-          <Route path="/questions" element={ <Question /> } />
+
+        <Route path="/planner" element={ <Planner /> } />
+        <Route path="/questions" element={ <Question 
+          authenticated={authenticated}
+          teacher={ teacher }
+          handleLogOut={handleLogOut}
+          />} 
+        />
+        <Route path="/questions/new" element={ <QuestionsForm /> } />
+
       </Routes> 
       </main>
     </div>
