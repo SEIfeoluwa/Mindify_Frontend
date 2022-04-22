@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
-import axios from 'axios'
+import Axios from 'axios'
 import PostItem from "../components/PostItem"
 import Sidebar from "../components/Sidebar"
-import { environment } from '..'
+
 
 const Profile = (props) => {
     const [posts, setPosts] = useState([])
@@ -11,7 +11,7 @@ const Profile = (props) => {
 
     useEffect(() => {
       const makeApiCall = async () => {
-        let res = await axios.get(`${environment.apiUrl}`)
+        let res = await Axios.get(`${environment.apiUrl}`)
         setPosts(res.data.posts)
       }
       makeApiCall();

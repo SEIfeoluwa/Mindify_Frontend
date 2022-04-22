@@ -1,8 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
-import axios from 'axios'
+import Axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-import { environment } from '..'
+
 
 const CreatePost = (props) => {
 
@@ -18,8 +18,8 @@ const CreatePost = (props) => {
   })
 
  const getNewPost = async () => {
-     await axios({
-       url: `${environment.apiUrl}posts/${teacher}`,
+     await Axios({
+       url: `posts/${teacher}`,
        method: 'post',
        data: newPost
      })

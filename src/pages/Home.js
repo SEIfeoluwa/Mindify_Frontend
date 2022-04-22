@@ -3,12 +3,12 @@ import PostItem from '../components/PostItem'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect} from 'react' 
-import { environment } from '..'
+
 
 
 const Home = () => {
  const [posts, setPosts] = useState([])
- const [teacherInfo, setTeacherInfo] = useState()
+//  const [teacherInfo, setTeacherInfo] = useState()
 
 console.log(environment.apiUrl)
 
@@ -18,7 +18,7 @@ console.log(environment.apiUrl)
     } 
 
 const getPosts = async () => {
-   const list = await axios.get(`${environment.apiUrl}posts`)
+   const list = await Axios.get(`posts`)
    console.log(list.data)
    setPosts(list.data)
 }

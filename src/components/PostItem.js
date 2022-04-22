@@ -1,14 +1,14 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { environment } from '..'
-import axios from 'axios'
+import Axios from 'axios'
 
 
 const PostItem = (props) => {
   const [teacherInfo, setTeacherInfo] = useState()
 
   const getTeacherName = async () => {
-    let res = await axios.get(`${environment.apiUrl}${props.teacherId}`)
+    let res = await Axios.get(`${props.teacherId}`)
     console.log(res.data)
     setTeacherInfo(res.data)
   }

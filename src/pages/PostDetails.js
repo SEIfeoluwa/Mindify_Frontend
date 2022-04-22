@@ -2,9 +2,9 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import axios from 'axios'
+import Axios from 'axios'
 import CommentsItem from '../components/CommentsItem'
-import { environment } from '..'
+
 
 const PostDetails = (props) => {
   const [ selectedPost, setSelectedPost ] = useState()
@@ -13,12 +13,12 @@ const PostDetails = (props) => {
 
 let { id } = useParams()
     const getPost = async () => {
-        const result = await axios.get(`${environment.apiUrl}posts/postdetail/${id}`)
+        const result = await Axios.get(`posts/postdetail/${id}`)
         console.log(result.data.getComments)
         setSelectedPost(result.data.indPost)
         setComment(result.data.getComments)
     }
-    
+
 
     useEffect(() => {
         getPost()
