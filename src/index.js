@@ -4,6 +4,11 @@ import { BrowserRouter } from 'react-router-dom'
 import './styles/index.css';
 import App from './App';
 
+// export const apiUrl = process.env.NODE_ENV === 'production' ? 'https://mighty-wildwood-47895.herokuapp.com/' : 'http://localhost:3001/'
+export const environment = {
+  production: true,
+  apiUrl: "https://mighty-wildwood-47895.herokuapp.com/"
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
