@@ -5,6 +5,11 @@ import './styles/index.css';
 import App from './App';
 
 
+// export const environment = {
+//   production: true,
+//   apiUrl: "https://mighty-wildwood-47895.herokuapp.com/"
+// }
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

@@ -6,6 +6,7 @@ import Register from './pages/Register';
 import './styles/App.css';
 import PostDetails from './pages/PostDetails';
 import CreatePost from './pages/Createpost';
+import Question from './pages/Question';
 import Home from './pages/Home';
 import MyProfile from './pages/MyProfile';
 import { CheckSession  } from './services/Auth'
@@ -13,13 +14,15 @@ import CommentsForm from './components/CommentsForm';
 import Sidebar from './components/Sidebar';
 import IPP from './pages/IPP'
 import Planner from './components/Planner';
+import QuestionsForm from './components/QuestionsForm';
 import Landing from './pages/Landing';
 import { useNavigate } from 'react-router-dom';
 
 
+
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
-  const [teacher, setTeacher] = useState(null)
+  const [teacher, setTeacher] = useState('')
 
   let navigate = useNavigate()
 
@@ -65,7 +68,6 @@ const App = () => {
           /> }/>
         <Route path='/register' element={ <Register /> }/>
         <Route path="/" element={ <Landing /> } />
-        {/* <Route path="/home" element={ <Home />} /> */}
         <Route path="/postdetail/:id" element={ <PostDetails /> } /> 
         <Route path="/posts/postdetail/:id" element={ <PostDetails /> } /> 
         <Route path="/posts" element={ <Home />} />
@@ -79,7 +81,16 @@ const App = () => {
           <MyProfile
           teacher={ teacher } 
           /> }/>
-          <Route path="/planner" element={ <Planner /> } />
+
+        <Route path="/planner" element={ <Planner /> } />
+        <Route path="/questions" element={ <Question 
+          authenticated={authenticated}
+          teacher={ teacher }
+          handleLogOut={handleLogOut}
+          />} 
+        />
+        <Route path="/questions/new" element={ <QuestionsForm /> } />
+
       </Routes> 
       </main>
     </div>

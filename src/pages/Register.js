@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { RegisterUser } from '../services/Auth'
 import { useNavigate } from 'react-router-dom'
 import Sidebar from '../components/Sidebar'
-import axios from 'axios'
+import Axios from 'axios'
 
 const Register = () => {
     let navigate = useNavigate()
@@ -25,7 +25,7 @@ const Register = () => {
             let emailArr = []
 
 
-            let result = await axios.get(`http://localhost:3001/teacher_info`)
+            let result = await Axios.get(`teacher_info`)
             result.data.tUsernames.map((name)=>{
                 usernameArr.push(name.username)
             })

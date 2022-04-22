@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
-import axios from 'axios'
+import Axios from 'axios'
 import PostItem from "../components/PostItem"
 import { useNavigate } from 'react-router-dom'
 import Delete from '../components/Delete'
 import UpdatePost from '../components/UpdatePost'
+
 
 const MyProfile = (props) => {
     const [posts, setPosts] = useState([])
@@ -17,13 +18,12 @@ const MyProfile = (props) => {
     useEffect(() => {
        
       const makeApiCall = async () => {
-        let res = await axios.get(`http://localhost:3001/posts/${teacherCallL}`)
+        let res = await Axios.get(`posts/${teacherCallL}`)
         setPosts(res.data)
       }
       makeApiCall();
       const teacherCall = async () => {
-        let res = await axios.get(`http://localhost:3001/${teacherCallL}`)
-        // console.log(res.data)
+        let res = await Axios.get(`${teacherCallL}`)
         setTeacherInfo(res.data)
       }
       teacherCall();

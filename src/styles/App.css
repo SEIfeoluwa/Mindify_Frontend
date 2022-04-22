@@ -789,6 +789,10 @@ margin: 20px;
 }
 
 
+.newQ {
+  text-align: center;
+}
+
 @keyframes redalert {
   50% {
     background-color: rgb(255, 78, 105);
@@ -811,4 +815,5 @@ margin: 20px;
   padding: 10px;
   box-shadow: 10px 5px 5px rgb(68, 42, 77);
   margin: 35px auto;
+
 }

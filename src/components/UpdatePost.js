@@ -1,10 +1,10 @@
 import React from 'react'
-import axios from 'axios'
+import Axios from 'axios'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { environment } from '..'
 
 const Update = (props) => {
-    //let { id } = useParams()
     let navigate = useNavigate()
 
  const [ title, setTitle ] = useState('')   
@@ -14,7 +14,7 @@ const Update = (props) => {
 
  
 const getPostToUpdate = async () => {
-     await axios.put(`http://localhost:3001/posts/${props.postId}`, {
+     await Axios.put(`posts/${props.postId}`, {
      title: title,
      content: content,
      image: image,
