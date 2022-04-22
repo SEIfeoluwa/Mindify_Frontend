@@ -3,6 +3,7 @@ import PostItem from '../components/PostItem'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect} from 'react' 
+import  MotivationComp  from '../components/MotivationComp'
 
 
 const Home = () => {
@@ -27,6 +28,7 @@ useEffect(() => {
     <div>
     <div className="center">
         <h1>MINDIFY</h1>
+        <MotivationComp />
         </div>
         {posts.map((post) => (
         <div className="home-container" onClick={() => showPost(post)}

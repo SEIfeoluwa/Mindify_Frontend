@@ -28,7 +28,7 @@
 
 ### [***Component Heirarchy***](https://drive.google.com/file/d/1m-EQDRjwmTLbI0Xdv99b72rAcIr4rLjE/view?ts=62588081)
 ![diagram](https://s7.gifyu.com/images/Screenshot-from-2022-04-15-09-38-35.png)
-
+##### [Trello](https://trello.com/b/7b1J7R2G/mindify)
 ***
 
 ### ***Getting Started***
@@ -39,6 +39,11 @@
 ### ***Future Updates***
     * Create user auth for Students
     * Seperate posts by hashtags to be filtered in the search bar.
+    * Create backend routes for Weekly Goals
 
 ### ***Credits:***
-##### [Trello](https://trello.com/b/7b1J7R2G/mindify)
+##### Article credits: 
+##### https://askthescientists.com/, healthline.com, Self.com, https://everydaypower.com/,  eatthis.com, Health Harvard,  https://askthescientists.com/
+***
+##### Image credits:
+#####  The Yoga Collaborative, SHRM,  Starmark Fitness Studio,  Gaia Herbs, Everyday Health, News Medical, Quote Fancy
