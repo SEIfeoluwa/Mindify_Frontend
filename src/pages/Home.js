@@ -7,7 +7,6 @@ import  MotivationComp  from '../components/MotivationComp'
 
 const Home = () => {
  const [posts, setPosts] = useState([])
-//  const [teacherInfo, setTeacherInfo] = useState()
 
 console.log(environment.apiUrl)
 
@@ -22,16 +21,8 @@ const getPosts = async () => {
    setPosts(list.data)
 }
 
-  
-  // const getTeacherName = async () => {
-  //   let res = await axios.get(`${environment.apiUrl}${posts.teacherId}`)
-  //   console.log(res.data)
-  //   setTeacherInfo(res.data)
-  // }
-
 useEffect(() => {
     getPosts()
-    // getTeacherName()
  }, [])
 
   return (
