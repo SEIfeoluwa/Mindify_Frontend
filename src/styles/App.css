@@ -152,12 +152,25 @@ img {
   color: rgb(255, 255, 255);
 }
 
+.form-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .submit-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-image: url('https://images.unsplash.com/photo-1492724724894-7464c27d0ceb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80');
+  background-repeat:no-repeat;
+  margin: 50px;
+  height: 700px;
+  width: 900px;
 }
 
 .s-container {

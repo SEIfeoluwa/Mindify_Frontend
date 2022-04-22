@@ -40,7 +40,7 @@ const CreatePost = (props) => {
 
     <div className="s-container">
        <h2 className="new-post">Add A New Post</h2>
-    <div>
+    <div className="form-form">
     
           <form className="submit-form" onSubmit={handleSubmit}> 
                   <input className="input" type="text" value={newPost.title} onChange={handleChange} name={'title'} placeholder={'title'} />
