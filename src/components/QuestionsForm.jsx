@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import axios from "axios"
+import Client from '../services/api'
 
 const QuestionsForm = (props) => {
     const [ newQuestion, setNewQuestion ] = useState({
@@ -16,8 +16,8 @@ const QuestionsForm = (props) => {
       let navigate= useNavigate()
 
       const createUser = async () => {
-          let res = await axios({
-              url: `http://localhost:3001/newuser`,
+          let res = await Client({
+              url: `newuser`,
               method: 'post',
               data: newUser
           })
@@ -25,7 +25,7 @@ const QuestionsForm = (props) => {
       }
 
       const createQuestion = async (userId) => {
-          await axios.post (`http://localhost:3001/questions/${userId}`, newQuestion)
+          await Client.post (`questions/${userId}`, newQuestion)
       }
 
       const userHandleChange = (e) => {

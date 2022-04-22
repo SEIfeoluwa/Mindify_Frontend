@@ -1,9 +1,8 @@
-
-import axios from 'axios'
+import Client from '../services/api'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import ReplyForm from '../components/ReplyForm'
-import { Routes, Route } from 'react-router-dom'
+
 
 
 
@@ -13,7 +12,7 @@ const Question = ({ authenticated, teacher }) => {
     const [ replies, setReplies ] = useState(true)
 
     const getQuestions = async () => {
-        const list = await axios.get('http://localhost:3001/questions')
+        const list = await Client.get('questions')
 
         console.log(list.data)
         setQuestions(list.data)
