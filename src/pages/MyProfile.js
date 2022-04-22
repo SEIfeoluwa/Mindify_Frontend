@@ -13,12 +13,7 @@ const MyProfile = (props) => {
     
     console.log(teacherCallL)
     let navigate = useNavigate()
-//  const teacherId = () => {
-//           let res = 
-//           console.log(res)
-//         //   setTeacherCall(res)
-//       }
-//       teacherId();
+
     useEffect(() => {
        
       const makeApiCall = async () => {
@@ -35,9 +30,6 @@ const MyProfile = (props) => {
       
     }, [])
 
-    // const showPost = (posts) => {  //after clicking on post it will go to PostDetails
-    //     navigate(`/postdetail/${posts.id}`)
-    // } 
 
     return (posts && teacherInfo) ? (
         <div>
@@ -75,4 +67,3 @@ const MyProfile = (props) => {
 export default MyProfile
 
 
-//onClick={() => showPost(post)}
