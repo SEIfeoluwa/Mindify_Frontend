@@ -1,7 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
-import axios from 'axios'
+import Axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+
 
 const CreatePost = (props) => {
 
@@ -17,8 +18,8 @@ const CreatePost = (props) => {
   })
 
  const getNewPost = async () => {
-     await axios({
-       url: `http://localhost:3001/posts/${teacher}`,
+     await Axios({
+       url: `posts/${teacher}`,
        method: 'post',
        data: newPost
      })
@@ -32,7 +33,7 @@ const CreatePost = (props) => {
  const handleSubmit = (e) => {
    e.preventDefault()
     getNewPost()
-    navigate('/')
+    navigate('/posts')
     window.location.reload(false)
  }
 
@@ -40,7 +41,7 @@ const CreatePost = (props) => {
 
     <div className="s-container">
        <h2 className="new-post">Add A New Post</h2>
-    <div>
+    <div className="form-form">
     
           <form className="submit-form" onSubmit={handleSubmit}> 
                   <input className="input" type="text" value={newPost.title} onChange={handleChange} name={'title'} placeholder={'title'} />

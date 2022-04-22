@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
-// import Header from './components/Header'
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Register from './pages/Register';
@@ -16,11 +15,16 @@ import Sidebar from './components/Sidebar';
 import IPP from './pages/IPP'
 import Planner from './components/Planner';
 import QuestionsForm from './components/QuestionsForm';
+import Landing from './pages/Landing';
+import { useNavigate } from 'react-router-dom';
+
 
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
   const [teacher, setTeacher] = useState('')
+
+  let navigate = useNavigate()
 
   const checkToken = async () => {
     const user = await CheckSession()
@@ -33,6 +37,7 @@ const App = () => {
     setTeacher(null)
     toggleAuthenticated(false);
     localStorage.clear();
+    navigate('/home')
   }
 
   useEffect(() => {
@@ -62,8 +67,10 @@ const App = () => {
           teacher={ teacher }
           /> }/>
         <Route path='/register' element={ <Register /> }/>
-        <Route path="/" element={ <Home />} />
+        <Route path="/" element={ <Landing /> } />
         <Route path="/postdetail/:id" element={ <PostDetails /> } /> 
+        <Route path="/posts/postdetail/:id" element={ <PostDetails /> } /> 
+        <Route path="/posts" element={ <Home />} />
         <Route path="/IPP" element={ <IPP /> } />
         <Route path="/createpost" element={ 
         <CreatePost 

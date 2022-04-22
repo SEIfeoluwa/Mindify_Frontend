@@ -11,7 +11,7 @@ const Profile = (props) => {
 
     useEffect(() => {
       const makeApiCall = async () => {
-        let res = await Axios.get('http://localhost:3001/')
+        let res = await Axios.get(`${environment.apiUrl}`)
         setPosts(res.data.posts)
       }
       makeApiCall();
@@ -31,7 +31,6 @@ const Profile = (props) => {
                 <PostItem 
                     key={post._id}
                     post={post.content}
-                    // user={tweet.user_id}
                     timeStamp={post.createdAt}
                     {...post}
                 />

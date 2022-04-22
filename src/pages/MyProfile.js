@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
-import axios from 'axios'
+import Axios from 'axios'
 import PostItem from "../components/PostItem"
 import { useNavigate } from 'react-router-dom'
 import Delete from '../components/Delete'
 import UpdatePost from '../components/UpdatePost'
+
 
 const MyProfile = (props) => {
     const [posts, setPosts] = useState([])
@@ -13,31 +14,22 @@ const MyProfile = (props) => {
     
     console.log(teacherCallL)
     let navigate = useNavigate()
-//  const teacherId = () => {
-//           let res = 
-//           console.log(res)
-//         //   setTeacherCall(res)
-//       }
-//       teacherId();
+
     useEffect(() => {
        
       const makeApiCall = async () => {
-        let res = await axios.get(`http://localhost:3001/posts/${teacherCallL}`)
+        let res = await Axios.get(`posts/${teacherCallL}`)
         setPosts(res.data)
       }
       makeApiCall();
       const teacherCall = async () => {
-        let res = await axios.get(`http://localhost:3001/${teacherCallL}`)
-        // console.log(res.data)
+        let res = await Axios.get(`${teacherCallL}`)
         setTeacherInfo(res.data)
       }
       teacherCall();
       
     }, [])
 
-    const showPost = (posts) => {  //after clicking on post it will go to PostDetails
-        navigate(`/postdetail/${posts.id}`)
-    } 
 
     return (posts && teacherInfo) ? (
         <div>
@@ -47,12 +39,14 @@ const MyProfile = (props) => {
             <div >
                 {posts.map((post) => (
                     <div className="home-container" 
-                    key={post.id} onClick={() => showPost(post)}>
+                    key={post.id}>
+                    <div>
                     <PostItem 
                         content={post.content}
                         image={post.image}
                         {...post}
                     />
+                    </div>
                     <div>
                         <Delete 
                         postId={post.id}
@@ -73,6 +67,3 @@ const MyProfile = (props) => {
 }
 
 export default MyProfile
-
-
-//onClick={() => showPost(post)}

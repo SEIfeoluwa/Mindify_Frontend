@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { RegisterUser } from '../services/Auth'
 import { useNavigate } from 'react-router-dom'
 import Sidebar from '../components/Sidebar'
+import Axios from 'axios'
 
 const Register = () => {
     let navigate = useNavigate()
@@ -14,28 +15,82 @@ const Register = () => {
         password: '',
         confirmPassword: ''
     })
+    const [usernameList, setUsernameList] = useState()
+    const [emailList, setEmailList] = useState()
+    const [usedInfo, setUsedInfo] = useState(true)
+
+    useEffect(()=> {
+        const getUserInfo = async () => {
+            let usernameArr = []
+            let emailArr = []
+
+
+            let result = await Axios.get(`teacher_info`)
+            result.data.tUsernames.map((name)=>{
+                usernameArr.push(name.username)
+            })
+            result.data.tEmails.map((email)=>{
+                emailArr.push(email.email)
+            })
+            let alphaUsernameArr = usernameArr.sort((a, b) => a.localeCompare(b))
+            let alphaEmailArr = emailArr.sort((a, b) => a.localeCompare(b))
+            setUsernameList(alphaUsernameArr)
+            setEmailList(alphaEmailArr)
+
+        }
+        getUserInfo()
+
+    }, [])
+
+    const redAlert = () => {
+        setUsedInfo(!usedInfo)
+    }
+
     const handleSubmit = async (e) => {
         e.preventDefault()
-        await RegisterUser({
-          firstName: formValues.firstName,
-          lastName: formValues.lastName,
-          username: formValues.username,
-          email:formValues.email,
-          password:formValues.password
-        })
+        
+        let formName = !usernameList.includes(formValues.username)
+        let formEmail = !emailList.includes(formValues.email)
+
+            
+        
+        if(formName && formEmail){
+            await RegisterUser({
+                firstName: formValues.firstName,
+                lastName: formValues.lastName,
+                username: formValues.username,
+                email:formValues.email,
+                password:formValues.password
+              })
+              setFormValues({
+                  firstName: '',
+                  lastName: '',
+                  username: '',
+                  email: '',
+                  password: '',
+                  confirmPassword: ''})
+              navigate('/login')
+        }
         setFormValues({
-            firstName: '',
-            lastName: '',
+            firstName: formValues.firstName,
+            lastName: formValues.lastName,
             username: '',
             email: '',
             password: '',
-            confirmPassword: ''})
-        navigate('/login')
+            confirmPassword: ''
+        })
+        console.log('Used info')
+        setTimeout(redAlert, 3000)
+
+        
     }
 
     const handleChange = (e) => {
         setFormValues({ ...formValues, [e.target.name]: e.target.value })
     }
+    console.log(formValues)
+    console.log(emailList)
+    console.log(usernameList)
 
     return (
         <div>
@@ -70,7 +125,7 @@ const Register = () => {
                     <div className="input-wrapper1">
                         <label htmlFor="username">Username</label>
                         <br></br>
-                        <input className="input1"
+                        <input className={usedInfo?"input1":"input1 red-alert"}
                         onChange={handleChange}
                         name="username"
                         type="text"
@@ -82,7 +137,7 @@ const Register = () => {
                     <div className="input-wrapper1">
                         <label htmlFor="email">Email</label>
                         <br></br>
-                        <input className="input1"
+                        <input className={usedInfo?"input1":"input1 red-alert"}
                         onChange={handleChange}
                         name="email"
                         type="email"

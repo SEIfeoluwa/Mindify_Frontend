@@ -23,7 +23,7 @@ const Login = (props) => {
         localStorage.setItem('user', payload.id)
         props.setTeacher(payload)
         props.toggleAuthenticated(true)
-         navigate('/')
+         navigate('/posts')
     }
     return (
         <div>
@@ -31,7 +31,7 @@ const Login = (props) => {
             <div className="login"> 
             <h1 className="reg-title">MINDIFY</h1>
                 <form className='log' onSubmit={handleSubmit}>
-                    <div className="welcome">Welcome! Please Log in</div>
+                    <div className="welcome"> Please Log in</div>
                     <div className='input-wrapper'>
                         <label htmlFor='email'>Username</label>
                          <input className="input2"
