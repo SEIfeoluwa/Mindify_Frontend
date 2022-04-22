@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import Axios from 'axios'
+import Client from '../services/api'
 import { useNavigate, useParams } from 'react-router-dom'
 
 const CommentsForm = () => {
@@ -18,7 +18,7 @@ let { id } = useParams()
 
   const getNewComment = async () => {
       console.log(newComment)
-      await Axios({
+      await Client({
           url: `comments/${id}`,
           method: 'post',
           data: newComment

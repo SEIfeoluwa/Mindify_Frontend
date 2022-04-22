@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import Axios from 'axios'
+import Client from '../services/api'
 import PostItem from "../components/PostItem"
 import { useNavigate } from 'react-router-dom'
 import Delete from '../components/Delete'
@@ -18,12 +18,12 @@ const MyProfile = (props) => {
     useEffect(() => {
        
       const makeApiCall = async () => {
-        let res = await Axios.get(`posts/${teacherCallL}`)
+        let res = await Client.get(`posts/${teacherCallL}`)
         setPosts(res.data)
       }
       makeApiCall();
       const teacherCall = async () => {
-        let res = await Axios.get(`${teacherCallL}`)
+        let res = await Client.get(`${teacherCallL}`)
         setTeacherInfo(res.data)
       }
       teacherCall();
