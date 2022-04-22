@@ -39,12 +39,14 @@ const MyProfile = (props) => {
             <div >
                 {posts.map((post) => (
                     <div className="home-container" 
-                    key={post.id} >
+                    key={post.id}>
+                    <div>
                     <PostItem 
                         content={post.content}
                         image={post.image}
                         {...post}
                     />
+                    </div>
                     <div>
                         <Delete 
                         postId={post.id}
@@ -65,5 +67,3 @@ const MyProfile = (props) => {
 }
 
 export default MyProfile
-
-

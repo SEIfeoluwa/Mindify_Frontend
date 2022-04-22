@@ -32,7 +32,7 @@ const CreatePost = (props) => {
  const handleSubmit = (e) => {
    e.preventDefault()
     getNewPost()
-    navigate('/')
+    navigate('/posts')
     window.location.reload(false)
  }
 

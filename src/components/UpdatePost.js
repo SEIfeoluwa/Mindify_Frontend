@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { useState } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Update = (props) => {
     //let { id } = useParams()
@@ -18,7 +18,6 @@ const getPostToUpdate = async () => {
      title: title,
      content: content,
      image: image,
-     
     });
 
 }
@@ -39,7 +38,6 @@ const handleSubmit= (e) => {
         <input className="input" type="text" image="image" onChange={(e)=>{setImgUrl(e.target.value)}}  placeholder="imgUrl"/>
       <button className="s-btn">Submit</button>
     </form>
-    
     </div>
   )
 }
