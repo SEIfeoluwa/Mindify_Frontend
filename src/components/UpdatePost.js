@@ -25,8 +25,9 @@ const getPostToUpdate = async () => {
 const handleSubmit= (e) => {
      e.preventDefault()
      getPostToUpdate()
-     navigate('/posts')
-     window.location.reload(false)
+     console.log(props.postId)
+    //  navigate('/posts')
+    //  window.location.reload(false)
 }
 
   return (
