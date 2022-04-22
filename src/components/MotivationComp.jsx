@@ -23,10 +23,10 @@ console.log(quote.quote)
 
     return(quote)?(
         <div className="quote-container">
-            
+            <div className="quote-wrapper">
             <h2 className="quote-text">{quote.quote}</h2>
             <p className="quote-auth">- {quote.author}</p>
-            
+            </div>
         </div>
     ):(
         <div></div>
