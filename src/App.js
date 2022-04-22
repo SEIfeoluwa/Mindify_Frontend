@@ -74,6 +74,7 @@ const App = () => {
           teacher={ teacher } 
           /> }/>
           <Route path="/planner" element={ <Planner /> } />
+          <Route path="/questions" element={ <Question /> } />
       </Routes> 
       </main>
     </div>
