@@ -9,7 +9,7 @@ const Home = () => {
  const [posts, setPosts] = useState([])
 //  const [teacherInfo, setTeacherInfo] = useState()
 
-console.log(environment.apiUrl)
+//console.log(environment.apiUrl)
 
  let navigate = useNavigate()  
     const showPost = (posts) => {  //after clicking on post it will go to PostDetails

@@ -11,7 +11,7 @@ const Profile = (props) => {
 
     useEffect(() => {
       const makeApiCall = async () => {
-        let res = await Axios.get(`${environment.apiUrl}`)
+        let res = await Axios.get(``)
         setPosts(res.data.posts)
       }
       makeApiCall();
