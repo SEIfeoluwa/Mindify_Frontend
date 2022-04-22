@@ -7,12 +7,14 @@ import { useNavigate } from 'react-router-dom'
 const Update = (props) => {
     let navigate = useNavigate()
 
+
+ //set all the states   
  const [ title, setTitle ] = useState('')   
  const [ content, setContent ] = useState('')
  const [ image, setImgUrl ] = useState('')
  
 
- 
+ //grab a post by id to update
 const getPostToUpdate = async () => {
      await Client.put(`posts/${props.postId}`, {
      title: title,
@@ -25,6 +27,7 @@ const getPostToUpdate = async () => {
 const handleSubmit= (e) => {
      e.preventDefault()
      getPostToUpdate()
+     //returns back to home page after submitting
      navigate('/posts')
      window.location.reload(false)
 }

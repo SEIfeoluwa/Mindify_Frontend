@@ -12,6 +12,9 @@ const PostDetails = (props) => {
 
 
 let { id } = useParams()
+
+
+  //get posts by id
     const getPost = async () => {
         const result = await Client.get(`posts/postdetail/${id}`)
         console.log(result.data.getComments)

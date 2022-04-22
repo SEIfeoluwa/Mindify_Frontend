@@ -6,10 +6,12 @@ import { useNavigate } from 'react-router-dom'
 
 const CreatePost = (props) => {
 
+  //grabs teachers id
   const teacher = props.teacher.id
-  console.log(teacher)
+  
   let navigate = useNavigate()
 
+  //set state of new post
   const [ newPost, setNewPost ] = useState({
     title: '',
     tag: '',
@@ -33,6 +35,7 @@ const CreatePost = (props) => {
  const handleSubmit = (e) => {
    e.preventDefault()
     getNewPost()
+    //returns back to posts after submitting
     navigate('/posts')
     window.location.reload(false)
  }
