@@ -1,7 +1,7 @@
 import Axios from 'axios'
 
 // process.env.NODE_ENV = 'production';
-// let apiUrl = process.env.NODE_ENV === 'production' ? 'https://mighty-wildwood-47895.herokuapp.com/' : 'http://localhost:3000/'
+// let apiUrl = process.env.NODE_ENV === 'production' ? 'https://mighty-wildwood-47895.herokuapp.com/' : 'http://localhost:3001/'
 const environment = {
       production: true,
       apiUrl: "https://mighty-wildwood-47895.herokuapp.com/"
