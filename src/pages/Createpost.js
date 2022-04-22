@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import Axios from 'axios'
+import Client from '../services/api'
 import { useNavigate } from 'react-router-dom'
 
 
@@ -18,7 +18,7 @@ const CreatePost = (props) => {
   })
 
  const getNewPost = async () => {
-     await Axios({
+     await Client({
        url: `posts/${teacher}`,
        method: 'post',
        data: newPost

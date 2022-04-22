@@ -1,7 +1,7 @@
 import React from 'react'
-import Axios from 'axios'
+import Client from '../services/api'
 import { useNavigate } from 'react-router-dom'
-import { environment } from '..'
+
 
 
 
@@ -10,7 +10,7 @@ const Delete = (props) => {
   let navigate = useNavigate()
 
   const deletePost = async () => {
-        await Axios.delete(`posts/${props.postId}`);
+        await Client.delete(`posts/${props.postId}`);
   }
 
    const handleDelete = () => {

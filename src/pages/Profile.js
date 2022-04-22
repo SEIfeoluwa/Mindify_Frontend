@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import Axios from 'axios'
+import Client from '../services/api'
 import PostItem from "../components/PostItem"
 import Sidebar from "../components/Sidebar"
 
@@ -11,7 +11,7 @@ const Profile = (props) => {
 
     useEffect(() => {
       const makeApiCall = async () => {
-        let res = await Axios.get(`${environment.apiUrl}`)
+        let res = await Client.get(``)
         setPosts(res.data.posts)
       }
       makeApiCall();

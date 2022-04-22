@@ -2,7 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import Axios from 'axios'
+import Client from '../services/api'
 import CommentsItem from '../components/CommentsItem'
 
 
@@ -13,7 +13,7 @@ const PostDetails = (props) => {
 
 let { id } = useParams()
     const getPost = async () => {
-        const result = await Axios.get(`posts/postdetail/${id}`)
+        const result = await Client.get(`posts/postdetail/${id}`)
         console.log(result.data.getComments)
         setSelectedPost(result.data.indPost)
         setComment(result.data.getComments)

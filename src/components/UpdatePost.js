@@ -1,8 +1,8 @@
 import React from 'react'
-import Axios from 'axios'
+import Client from '../services/api'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { environment } from '..'
+
 
 const Update = (props) => {
     let navigate = useNavigate()
@@ -14,7 +14,7 @@ const Update = (props) => {
 
  
 const getPostToUpdate = async () => {
-     await Axios.put(`posts/${props.postId}`, {
+     await Client.put(`posts/${props.postId}`, {
      title: title,
      content: content,
      image: image,
