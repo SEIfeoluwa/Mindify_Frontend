@@ -40,7 +40,7 @@ const CreatePost = (props) => {
   return (
 
     <div className="s-container">
-       <h2 className="new-post">Add A New Post</h2>
+       <h2 className="new-post">ADD A NEW POST</h2>
     <div className="form-form">
     
           <form className="submit-form" onSubmit={handleSubmit}> 

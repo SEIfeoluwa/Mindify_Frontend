@@ -54,7 +54,7 @@ const QuestionsForm = (props) => {
       }
 
     return (
-        <div className="s-container">
+        <div className="s-container centered">
        <h2 className="new-post">Ask Your Question</h2>
     <div>
         <div>
