@@ -623,11 +623,11 @@ img {
   font-size: 15px;
 }
 
-.item1 {
-  padding: 2px;
-  font-size: 15px;
+  .item1 {
+    padding: 2px;
+    font-size: 15px;
 
-}
+  }
 
 .post-details {
   margin: 10px 0;

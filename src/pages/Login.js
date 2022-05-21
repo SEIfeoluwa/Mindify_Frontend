@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { SignInUser } from '../services/Auth'
-import Sidebar from '../components/Sidebar'
+
 
 const Login = (props) => {
     let navigate = useNavigate()
@@ -20,14 +20,13 @@ const Login = (props) => {
         password: "",
         })
         console.log(payload.id)
-        localStorage.setItem('user', payload.id)
-        props.setTeacher(payload)
+        localStorage.setItem('user', payload.id)        
+          props.setTeacher(payload)
         props.toggleAuthenticated(true)
          navigate('/posts')
     }
     return (
         <div>
-            <Sidebar />
             <div className="login"> 
             <h1 className="reg-title">MINDIFY</h1>
                 <form className='log' onSubmit={handleSubmit}>
