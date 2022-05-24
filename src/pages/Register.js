@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { RegisterUser } from '../services/Auth'
 import { useNavigate } from 'react-router-dom'
-import Sidebar from '../components/Sidebar'
 import Client from '../services/api'
 
 const Register = () => {
@@ -94,7 +93,6 @@ const Register = () => {
 
     return (
         <div>
-            <Sidebar />
             <div className="card-overlay centered">
             <h1 className="reg-title">MINDIFY</h1>
                 <form className="col" onSubmit={handleSubmit}>

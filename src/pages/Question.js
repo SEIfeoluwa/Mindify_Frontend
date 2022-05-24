@@ -4,15 +4,12 @@ import { Link } from 'react-router-dom'
 import ReplyForm from '../components/ReplyForm'
 
 
-
-
-
 const Question = ({ authenticated, teacher }) => {
     const [ questions, setQuestions] = useState([])
     const [ replies, setReplies ] = useState(true)
 
     const getQuestions = async () => {
-        const list = await Client.get('questions')
+        const list = await Client.get(`questions`)
 
         console.log(list.data)
         setQuestions(list.data)
