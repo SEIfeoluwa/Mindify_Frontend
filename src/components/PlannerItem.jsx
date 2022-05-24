@@ -1,6 +1,9 @@
 import React from 'react'
 
 const PlannerItem = (props) => {
+
+  
+  //map all the goals and add remove with a onclick function
   return (
     <ul className="goal-item">
            {props.goals.map((goal, index) => (

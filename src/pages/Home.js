@@ -7,14 +7,19 @@ import Client from '../services/api'
 
 
 const Home = () => {
+
+  //set post state
  const [posts, setPosts] = useState([])
 
 
  let navigate = useNavigate()  
-    const showPost = (posts) => {  //after clicking on post it will go to PostDetails
+
+ //after clicking on post it will go to PostDetails
+    const showPost = (posts) => {  
         navigate(`/posts/postdetail/${posts.id}`)
     } 
 
+ //call to access posts   
 const getPosts = async () => {
    const list = await Client.get(`posts`)
    console.log(list.data)
@@ -26,11 +31,11 @@ useEffect(() => {
  }, [])
 
   return (
-    <div>
+    <div className="home-cont">
     <div className="center">
         <h1>MINDIFY</h1>
         <MotivationComp />
-        </div>
+        </div>  
         {posts.map((post) => (
         <div className="home-container" onClick={() => showPost(post)}
         key={post.id}>

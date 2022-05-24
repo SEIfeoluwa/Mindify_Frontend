@@ -7,12 +7,13 @@ import 'react-calendar/dist/Calendar.css';
 
 const Planner = () => {
 
+    //get the current date
     const current = new Date();
     const getDate = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
 
+    //sets states
     const [date, setDate] = useState(new Date())
-
- const [goals, setGoals] = useState([
+    const [goals, setGoals] = useState([
           'Do more yoga',
           'Study',
           'Try Meditating'
@@ -20,6 +21,7 @@ const Planner = () => {
      
        const [getGoal, changeGoal] = useState('')
      
+       //function to add your weekly goal
         const addGoal = (event) => {
             event.preventDefault()
           let newList = [...goals, getGoal] 
@@ -33,6 +35,7 @@ const Planner = () => {
           
         }
      
+        //function to remove your weekly goal
          const removeGoal = (index) => {
            let goalList = [...goals] 
            goalList.splice(index, 1)
@@ -40,13 +43,11 @@ const Planner = () => {
          }
          
    
-
+     //save goals to local storage
    useEffect(() => {
        localStorage.setItem("goals", JSON.stringify(goals))
    }, [goals])
  
-let aGoal
-
  
   return (
     <div className="goals-container">
