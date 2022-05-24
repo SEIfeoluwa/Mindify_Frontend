@@ -116,7 +116,7 @@ img {
   margin: 10px;
   font-size: 30px;
   font-family: 'Roboto', sans-serif;
-  width: 900px;
+  width: 700px;
   animation: space 2s 1;
 }
 
@@ -127,12 +127,12 @@ img {
 }
 
 .comment-container {
-  
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 600px;
 }
 
  .submit-container {
@@ -145,7 +145,7 @@ img {
   background-repeat:no-repeat;
   margin: 50px;
   height: 700px;
-  width: 900px;
+  width: 700px;
   
 }
 
@@ -182,7 +182,7 @@ img {
   background-repeat:no-repeat;
   margin: 50px;
   height: 700px;
-  width: 900px;
+  width: 700px;
 }
 
 .s-container {
