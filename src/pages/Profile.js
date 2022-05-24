@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Client from '../services/api'
 import PostItem from "../components/PostItem"
-import Sidebar from "../components/Sidebar"
+
 
 
 const Profile = (props) => {
@@ -19,7 +19,6 @@ const Profile = (props) => {
 
     return (
         <div>
-            <Sidebar />
             <div>
                 <h1>{teacher.username}</h1>
                 <h2>{teacher.firstName}{teacher.lastName}</h2>
