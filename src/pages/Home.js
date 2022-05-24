@@ -31,7 +31,7 @@ useEffect(() => {
  }, [])
 
   return (
-    <div>
+    <div className="home-cont">
     <div className="center">
         <h1>MINDIFY</h1>
         <MotivationComp />
