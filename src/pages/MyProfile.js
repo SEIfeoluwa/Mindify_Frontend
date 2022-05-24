@@ -32,39 +32,36 @@ const MyProfile = (props) => {
     }, [])
 
 
-    return (posts && teacherInfo) ? (
+    return posts && teacherInfo ? (
+      <div>
         <div>
-            <div>
-                <h1>{teacher.username}</h1>
-            </div>
-            <div >
-                {posts.map((post) => (
-                    <div className="home-container" 
-                    key={post.id}>
-                    <div>
-                    <PostItem 
-                        content={post.content}
-                        image={post.image}
-                        {...post}
-                    />
-                    </div>
-                    <div>
-                        <Delete 
-                        postId={post.id}
-                        />
-                    </div>
-                    <div>
-                        <UpdatePost
-                          postId={post.id}
-                           />
-                    </div>
-                    </div>
-                ))}
-            </div>
+          <h1>{teacher.username}</h1>
         </div>
-    ) : ( 
-        <div>Your Posts Will Appear Here</div>
-    )
+        <div>
+          <div className="home-cont">
+            {posts.map((post) => (
+              <div className="home-container" key={post.id}>
+                <div>
+                  <PostItem
+                    content={post.content}
+                    image={post.image}
+                    {...post}
+                  />
+                </div>
+                <div>
+                  <Delete postId={post.id} />
+                </div>
+                <div>
+                  <UpdatePost postId={post.id} />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    ) : (
+      <div>Your Post Will Appear Here</div>
+    );
 }
 
 export default MyProfile

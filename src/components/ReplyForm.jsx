@@ -33,7 +33,7 @@ const ReplyForm = ({question, setReplies, replies}) => {
     }
 
     return(
-        <div>
+        <div className="home-cont">
             <form onSubmit={handleSubmit} className="submit-form">
                 <textarea className="in-cont input" type="text" value={newReply.content} onChange={handleChange} name={'content'} placeholder={'your answer'} />
                 <button className="s-btn">Submit</button>
