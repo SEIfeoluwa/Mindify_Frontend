@@ -31,25 +31,29 @@ useEffect(() => {
  }, [])
 
   return (
-    <div className="home-cont">
-    <div className="center">
+    <div>
+      <div className="center">
         <h1>MINDIFY</h1>
         <MotivationComp />
-        </div>  
+      </div>
+      <div className="home-cont">
         {posts.map((post) => (
-        <div className="home-container" onClick={() => showPost(post)}
-        key={post.id}>
-        <PostItem
-             title={post.title} 
-             image={post.image}
-             content={post.content}
-             teacherId={post.teacher_id}
-              />
-        </div>
-       ))}
-     
+          <div
+            className="home-container"
+            onClick={() => showPost(post)}
+            key={post.id}
+          >
+            <PostItem
+              title={post.title}
+              image={post.image}
+              content={post.content}
+              teacherId={post.teacher_id}
+            />
+          </div>
+        ))}
+      </div>
     </div>
-  )
+  );
 }
 
 export default Home
