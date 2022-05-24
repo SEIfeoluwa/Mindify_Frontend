@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import Client from '../services/api'
 import PostItem from "../components/PostItem"
-import { useNavigate } from 'react-router-dom'
 import Delete from '../components/Delete'
 import UpdatePost from '../components/UpdatePost'
 
@@ -11,8 +10,7 @@ const MyProfile = (props) => {
     const [teacherInfo, setTeacherInfo] = useState()
     const teacherCallL = localStorage.getItem('user')
     const teacher = props.teacher
-    const teachId = parseInt(teacherCallL)
-    
+
 
     useEffect(() => {
        
@@ -23,7 +21,7 @@ const MyProfile = (props) => {
       }
       makeApiCall();
       const teacherCall = async () => {
-        let res = await Client.get(`${teacherCallL}`)
+        let res = await Client.get(`user/${teacherCallL}`)
         console.log(res)
         setTeacherInfo(res.data)
       }
