@@ -80,8 +80,6 @@ const Register = () => {
         })
         console.log('Used info')
         setTimeout(redAlert, 3000)
-
-        
     }
 
     const handleChange = (e) => {
