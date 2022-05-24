@@ -11,19 +11,20 @@ const MyProfile = (props) => {
     const [teacherInfo, setTeacherInfo] = useState()
     const teacherCallL = localStorage.getItem('user')
     const teacher = props.teacher
+    const teachId = parseInt(teacherCallL)
     
-    console.log(teacherCallL)
-    let navigate = useNavigate()
 
     useEffect(() => {
        
       const makeApiCall = async () => {
         let res = await Client.get(`posts/${teacherCallL}`)
+        console.log(res)
         setPosts(res.data)
       }
       makeApiCall();
       const teacherCall = async () => {
         let res = await Client.get(`${teacherCallL}`)
+        console.log(res)
         setTeacherInfo(res.data)
       }
       teacherCall();
@@ -62,7 +63,7 @@ const MyProfile = (props) => {
             </div>
         </div>
     ) : ( 
-        <div></div>
+        <div>Your Posts Will Appear Here</div>
     )
 }
 

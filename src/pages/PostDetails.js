@@ -24,14 +24,14 @@ let { id } = useParams()
 
 
     useEffect(() => {
-        getPost()
+        getPost();
      
     }, [])
 
   return ( selectedPost && comments ) ? (
    <div className="post-details">
        <p className="post-title">Title: {selectedPost.title}</p>
-             <img src={selectedPost.image}/>
+             <img src={selectedPost.image} alt=""/>
              <br></br>
                   <p className="post-content"> {selectedPost.content}</p>
              <br></br>
